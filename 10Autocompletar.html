@@ -1,0 +1,1276 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/10Autocompletar.html">
+      
+      
+        <link rel="prev" href="09Comandos.html">
+      
+      
+        <link rel="next" href="11Buscar.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Completado de texto - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#completar-texto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Completado de texto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Configurar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Edicion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="10Autocompletar.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autocompletado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autocompletado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simbolos-de-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Símbolos de cierre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-ayudas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar Ayudas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palabras-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palabras clave
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plantillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plantillas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atajos-de-teclado-de-snippet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atajos de teclado de snippet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertando-valores-de-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertando valores de color
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertando-caracteres-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertando caracteres especiales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertar-secuencias-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertar secuencias HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texto-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texto de pruebas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11Buscar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13Compilar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14Proyectos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="completar-texto">Completar texto<a class="headerlink" href="#completar-texto" title="Permanent link">&para;</a></h1>
+<p>Geany cuenta con la posibilidad de generar texto automáticamente. Veamos las diferentes posibilidades.</p>
+<h2 id="autocompletado">Autocompletado<a class="headerlink" href="#autocompletado" title="Permanent link">&para;</a></h2>
+<p>Cuando comenzamos a teclear una palabra, Geany es capaz de sugerir posibles terminaciones, mostrando una lista emergente de palabras completas:</p>
+<p><img alt="" src="img/10Autocompletar02.png" /></p>
+<p>Basta con seleccionar una de esas palabras desplazándose por la lista con <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> y <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y pulsando <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <span class="keys"><kbd class="key-tab">Tab</kbd></span> para aceptar la palabra sugerida. Podemos descartar la lista de sugerencias pulsando <span class="keys"><kbd class="key-escape">Esc</kbd></span>, o si seguimos tecleando caracteres, la lista desaparecerá cuando no haya coincidencias.</p>
+<p>Esta función se activa con  <em>Editar &gt; Preferencias &gt; Editor &gt; Completados &gt; Autocompletar símbolos</em>.</p>
+<p>Geany puede ofrecer una lista de posibles palabras a partir de las que hay el panel de símbolos (barra lateral), y para los símbolos definidos en los archivos de configuración. </p>
+<p>Podemos hacer que la lista de sugerencias se confeccione a partir de todas las palabras del documento, no solo las que aparecen en la lista de símbolos. Activar esta posibilidad con el menú <em>Editar &gt; Preferencias &gt; Editor &gt; Completados &gt; Autocompletar todas las palabras</em>. </p>
+<p>La lista de sugerencias se muestra cuando se escriben los primeros caracteres. El número es configurable mediante <em>Editar &gt; Preferencias &gt; Editor &gt; Completados &gt; Número de caracteres a escribir</em> (valor predeterminado 4). La opción <em>Altura de la lista de completado</em> indica el número de filas que se mostrarán en la lista de sugerencias, o el <em>número máximo de sugerencias</em>.</p>
+<p>Podemos forzar manualmente que se muestre la lista de sugerencias, pulsando la combinación de teclas <em>Completar palabra</em>. Es configurable, y la combinación predeterminada es <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-space">Space</kbd></span>.</p>
+<p>Para algunos lenguajes, la lista de autocompletado estará ordenada intentando mostrar en la parte superior de la lista los nombres que tienen más probabilidades de ser lo que el usuario desea.</p>
+<p>Si elegimos una sugerencia pulsando <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <span class="keys"><kbd class="key-tab">Tab</kbd></span>, se eliminarán el resto de caracteres a la derecha del cursor si se establece la preferencia <em>Eliminar el resto de la palabra al completar</em> (en las preferencias de completado del editor).</p>
+<p>La lista de sugerencias se forma en segundo plano, analizando los documentos y los archivos de configuración. Podemos establecer la frecuencia de actualización (en milisegundos) de la lista de símbolos si el rendimiento, en el caso de archivos grandes, nos da problemas. Pulsar en <em>Editar &gt; Preferencias &gt; Editor &gt; Completados</em>. El valor predeterminado es 250 ms, lo que significa que la lista de símbolos se actualizará como máximo cuatro veces por segundo, tanto si el documento ha cambiado como si no lo ha hecho. Un valor de 0 deshabilita las actualizaciones automáticas, por lo que la lista de símbolos solo se actualizará al guardar el documento.</p>
+<h2 id="simbolos-de-cierre">Símbolos de cierre<a class="headerlink" href="#simbolos-de-cierre" title="Permanent link">&para;</a></h2>
+<p>Geany puede insertar automáticamente un paréntesis, llave, corchete o comillas de cierre cuando insertamos un carácter de apertura. Por ejemplo, si tecleamos un carácter <code>(</code>, Geany añadirá automáticamente un <code>)</code>. </p>
+<p>Con <em>Editar &gt; Preferencias &gt; Editor &gt; Completado</em> podemos configurar para qué caracteres debería funcionar esto.</p>
+<ul>
+<li>Paréntesis ( )</li>
+<li>Llaves { }</li>
+<li>Corchetes [ ]</li>
+<li>Comillas simples ' '</li>
+<li>Comillas dobles " "</li>
+</ul>
+<h2 id="mostrar-ayudas">Mostrar Ayudas<a class="headerlink" href="#mostrar-ayudas" title="Permanent link">&para;</a></h2>
+<p>Supongamos que estamos escribiendo un programa en lenguaje C. Queremos añadir la instrucción:</p>
+<div class="highlight"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>En el momento que empezamos a teclear y llegamos a los cuatro caracteres (o el número configurado), se muestra una sugerencia de autocompletado. Aceptamos pulsando <span class="keys"><kbd class="key-tab">Tab</kbd></span>. Al teclear el paréntesis de apertura:</p>
+<div class="codehilite"><pre><span></span><code>printf(
+</code></pre></div>
+
+<p>se muestra una pequeña ayuda (calltip) en un recuadro emergente, mostrando un prototipo de la función con la lista de parámetros:</p>
+<p><img alt="" src="img/10Autocompletar03.png" /></p>
+<p>Podemos forzar que se muestre la ayuda, pulsando la combinación de teclas <em>Mostrar pistas de prototipos</em> (configurable, valor predeterminado <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-space">Space</kbd></span>).</p>
+<h2 id="snippets">Snippets<a class="headerlink" href="#snippets" title="Permanent link">&para;</a></h2>
+<p>Los snippets son pequeños fragmentos de texto que serán reemplazados por un texto más complejo. Tecleamos una palabra clave, pulsamos <span class="keys"><kbd class="key-tab">Tab</kbd></span> a continuación, y se hace la sustitución. Sirven para ahorrar tiempo al escribir textos de forma recurrente, dejando que Geany haga el trabajo por nosotros. </p>
+<p>Hay dos tipos de snippets, los predeterminados por Geany y los que nosotros podemos crear. Por ejemplo, si estamos escribiendo un programa en lenguaje C y tecleamos la palabra <code>if</code> seguida de la tecla <span class="keys"><kbd class="key-tab">Tab</kbd></span>, se sustituye por:</p>
+<div class="codehilite"><pre><span></span><code>if (_)
+{
+    _
+}
+</code></pre></div>
+
+<p>y tendremos que sustituir a mano los caracteres <code>_</code> por el texto correspondiente. La sustitución deja el cursor en el primer bloque (el que hay entre paréntesis), porque en la definición del snippet se indica donde queda el cursor tras el proceso de transformación.</p>
+<p>Los <em>snippets</em> son una función de Geany que se activa con <em>Preferencias &gt; Editor &gt; Completado &gt; Completado de construcciones</em>.</p>
+<p>Podemos crear nuevos snippets, o personalizar los predeterminados, editando un archivo de configuración llamado <code>snippets.conf</code>. Podemos acceder a su contenido mediante el menú <em>Herramientas &gt; Archivos de configuración &gt; Snippets.conf</em>.</p>
+<p>Los snippets pueden ser genéricos, para todo tipo de documento, o específicos para determinados tipos de archivo. El contenido del <code>snippets.conf</code> se organiza en forma de secciones, con una línea de cabecera cada una. Por ejemplo, para establecer los snippets utilizados en programas escritos en lenguaje C:</p>
+<div class="highlight"><pre><span></span><code>[C]
+#if=if (%cursor%)%block_cursor%
+#else=else%block_cursor%
+#for=for (i = 0; i &lt; %cursor%; i++)%block_cursor%
+#while=while (%cursor%)%block_cursor%
+#do=do\n{\n\t%cursor%\n} while (%cursor%)\n
+#switch=switch (%cursor%)%brace_open%case %cursor%:\n\t\t%cursor%\n\t\tbreak;\n\tdefault:\n\t\t%cursor%\n%brace_close%
+</code></pre></div>
+<p>Podemos averiguar cuales son los tipos de archivo contemplados por Geany si en un Terminal de comandos escribimos:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>geany<span class="w"> </span>--ft-names
+</code></pre></div>
+
+<p>Las líneas precedidas por un carácter <code>#</code> se consideran comentarios, y son una forma de desactivar <em>snippets</em>. Por defecto se aplican los snippets predefinidos. Si quitamos el carácter <code>#</code> de una línea en el fichero de configuración, ese snippet reemplazará al estándar. En el ejemplo anterior, el snippet asignado a la palabra <code>if</code> es:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>if=if (%cursor%)%block_cursor%
+</code></pre></div>
+
+<p>y quitando el carácter inicial <code>#</code> podremos personalizarlo. Para que tengan efecto los cambios, guardar el fichero y ejecutar la opción de menú <em>Herramientas &gt; Recargar configuración</em> (o reiniciar Geany).</p>
+<p>El formato para definir un snippet es:</p>
+<div class="codehilite"><pre><span></span><code>palabra_clave=texto
+</code></pre></div>
+
+<p>La palabra clave no puede contener espacios, ni tampoco puede haberlos a la izquierda y derecha del símbolo <code>=</code>.</p>
+<p>La sección "[Default]" contiene los snippets que están disponibles para todo tipo de archivo. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>[Default]
+nombre=Julián Pérez
+</code></pre></div>
+<p>Cada vez que escribamos <code>nombre</code> seguido de la tecla <span class="keys"><kbd class="key-tab">Tab</kbd></span>, reemplazará la palabra "nombre" por "Julián Pérez". Podemos cambiar la tecla <span class="keys"><kbd class="key-tab">Tab</kbd></span> en el diálogo de preferencias, combinaciones de teclas. La tecla de atajo se denomina <em>Completar construcción</em>.</p>
+<p>La sección "[Special]" contiene snippets que pueden usarse como parte de otros snippets. Por ejemplo, en el snippet:</p>
+<div class="codehilite"><pre><span></span><code>if=if (%cursor%)%block_cursor%
+</code></pre></div>
+
+<p>el fragmento <code>%block_cursor%</code> es a su vez un snippet definido en la sección Special.</p>
+<p>Al definir snippets, podemos usar ciertas secuencias:</p>
+<ul>
+<li><code>\n</code> , <code>%newline%</code> : inserta una nueva línea</li>
+<li><code>\t</code> , <code>%ws%</code>  : inserta un nivel de sangría, de acuerdo con el modo de sangría del documento actual</li>
+<li><code>\s</code> : inserta espacios en blanco al principio o al final de un valor. Por ejemplo:<ul>
+<li><code>clave=  valor</code> no funcionará</li>
+<li><code>clave=\svalor</code> funciona</li>
+</ul>
+</li>
+<li><code>%cursor%</code>  : coloca el cursor en esa posición tras completar la sustitución. Podemos definir varios comodines <code>%cursor%</code> y usar la combinación de teclas asignada a la acción <em>Mover cursor dentro de una construcción</em> para saltar a la siguiente posición del cursor definida en el fragmento completado.</li>
+<li><code>%clave%</code>, siendo <code>clave</code> el nombre de un snippet en la sección "Special". Si por ejemplo hemos definido una clave llamada <code>"brace_open"</code> en la sección <code>"Special"</code>, podemos usar <code>%brace_open%</code> en cualquier otro snippet.</li>
+</ul>
+<h2 id="palabras-clave">Palabras clave<a class="headerlink" href="#palabras-clave" title="Permanent link">&para;</a></h2>
+<p>Como se ha mencionado, la palabra clave de un snippet no puede contener espacios. La sección "[Special]" puede contener una clave llamada "wordchars" que enumera todos los caracteres que una palabra clave puede contener para ser reconocida como tal:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span>wordchars=_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+</code></pre></div>
+
+<p>Podemos dejarlo como comentario, con el prefijo <code>#</code>, y usar los caracteres predeterminados. O bien quitar ese prefijo, agregando o eliminando caracteres para que la lista se ajuste a nuestras necesidades (por ejemplo, para añadir las eñes).</p>
+<h2 id="plantillas">Plantillas<a class="headerlink" href="#plantillas" title="Permanent link">&para;</a></h2>
+<p>Las plantillas son textos y formatos predefinidos por Geany, y utilizados tanto para crear <em>snippets</em> como para otras funciones del editor. </p>
+<p>Por ejemplo, si en la definición de snippets ponemos:</p>
+<div class="highlight"><pre><span></span><code>[Default]
+nombre=Mi nombre es {developer}
+sistema=Mi sistema: {command:uname -a}
+</code></pre></div>
+<p>Esto reemplazará la palabra <code>nombre</code> por "Mi nombre es " seguido del valor del comodín <em>developer</em>, y la palabra <code>sistema</code> por el resultado de ejecutar el comando <code>uname -a</code>.</p>
+<p>Podemos configurar el valor de los comodines mediante el menú <em>Editar &gt; Preferencias &gt; Plantillas</em>:</p>
+<ul>
+<li><code>{developer}</code> es el nombre del usuario</li>
+<li><code>{initial}</code> son sus iniciales</li>
+<li><code>{mail}</code> es su correo electrónico</li>
+<li><code>{company}</code> es el nombre de la empresa</li>
+<li><code>{version}</code> es el número de versión en nuevos proyectos</li>
+</ul>
+<p>Las plantillas incluyen formatos para mostrar datos del sistema. Por ejemplo, podemos crear el siguiente <em>snippet</em>:</p>
+<div class="codehilite"><pre><span></span><code>año={year}
+</code></pre></div>
+
+<p>y al teclear "año" seguido de <span class="keys"><kbd class="key-tab">Tab</kbd></span>, se sustituirá por el año en curso con el formato especificado en la configuración de plantillas (por defecto, "%Y"). Las plantillas para mostrar fechas y horas son <code>{year}</code>, <code>{date}</code> y <code>{datetime}</code>. Los especificadores de formato son <a href="https://docs.gtk.org/glib/method.DateTime.format.html">los de la biblioteca Glib</a>, usada por Gtk+, que es uno de los componentes de Geany.</p>
+<p>La plantilla <code>{command:texto}</code> ejecuta un comando del sistema operativo y genera un texto a partir del resultado de la ejecución del comando en cuestión.</p>
+<p>Podemos obtener datos de Geany con:</p>
+<ul>
+<li><code>{geanyversion}</code> es la versión del editor que estamos utilizando, por ejemplo, "Geany 2.0"</li>
+<li><code>{filename}</code> es el nombre del archivo actual. En blanco si todavía no tiene nombre</li>
+<li><code>{project}</code> es el nombre del proyecto actual. Véase <em>Gestión de proyectos</em> más adelante.</li>
+<li><code>{description}</code> es el texto de descripción del proyecto, que establecemos con el menú <em>Proyecto &gt; propiedades</em></li>
+</ul>
+<h2 id="atajos-de-teclado-de-snippet">Atajos de teclado de snippet<a class="headerlink" href="#atajos-de-teclado-de-snippet" title="Permanent link">&para;</a></h2>
+<p>El mecanismo de <em>snippet</em> funciona introduciendo una palabra clave y pulsando <span class="keys"><kbd class="key-tab">Tab</kbd></span> para que se haga la sustitución. Ya hemos visto que podemos reemplazar esa tecla por otra utilizando el menú <em>Editar &gt; Preferencias &gt; Combinaciones &gt; Completar construcción</em>.</p>
+<p>Otra posibilidad es definir una combinación de teclas que, al pulsarla, genere el texto del snippet sin necesidad de introducir la palabra clave. Estas combinaciones se definen en el  archivo <code>snippets.conf</code>, en el apartado <code>[Keybindings]</code>:</p>
+<div class="highlight"><pre><span></span><code>[Keybindings]
+for=&lt;Ctrl&gt;7
+block_cursor=&lt;Ctrl&gt;8
+</code></pre></div>
+<p>Las combinaciones de teclas de snippet pueden ser anuladas por las combinaciones de teclas configurables de Geany.</p>
+<h2 id="insertando-valores-de-color">Insertando valores de color<a class="headerlink" href="#insertando-valores-de-color" title="Permanent link">&para;</a></h2>
+<p>En algunos lenguajes de programación necesitamos especificar en el texto del programa los códigos de color a utilizar. Por ejemplo:</p>
+<div class="codehilite"><pre><span></span><code>background-color : #ff0000
+</code></pre></div>
+
+<p>El formato de los códigos de color suele ser <code>#RRGGBB</code>, representando una combinación de los tres colores básicos, donde:</p>
+<ul>
+<li><code>RR</code> es la cantidad de rojo, de 00 a FF en formato hexadecimal, es decir, de 0 a 255 en sistema de numeración decimal.</li>
+<li><code>GG</code> representa la cantidad de color verde</li>
+<li><code>BB</code> representa la cantidad de color azul</li>
+</ul>
+<p>Algunos ejemplos:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th></th>
+<th>Código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rojo</td>
+<td><span style="background-color:#ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#FF0000</code></td>
+</tr>
+<tr>
+<td>verde</td>
+<td><span style="background-color:#00ff00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#00FF00</code></td>
+</tr>
+<tr>
+<td>azul</td>
+<td><span style="background-color:#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#0000FF</code></td>
+</tr>
+<tr>
+<td>amarillo</td>
+<td><span style="background-color:#ffff00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#FFFF00</code></td>
+</tr>
+<tr>
+<td>cian</td>
+<td><span style="background-color:#00ffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#00FFFF</code></td>
+</tr>
+<tr>
+<td>fucsia</td>
+<td><span style="background-color:#ff00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#FF00FF</code></td>
+</tr>
+<tr>
+<td>negro</td>
+<td><span style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#000000</code></td>
+</tr>
+<tr>
+<td>gris</td>
+<td><span style="background-color:#808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#808080</code></td>
+</tr>
+<tr>
+<td>gris claro</td>
+<td><span style="background-color:#c0c0c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#C0C0C0</code></td>
+</tr>
+<tr>
+<td>blanco</td>
+<td><span style="background-color:#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#FFFFFF</code></td>
+</tr>
+<tr>
+<td>marrón</td>
+<td><span style="background-color:#800000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#800000</code></td>
+</tr>
+<tr>
+<td>verde oscuro</td>
+<td><span style="background-color:#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#008000</code></td>
+</tr>
+<tr>
+<td>azul oscuro</td>
+<td><span style="background-color:#000080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#000080</code></td>
+</tr>
+<tr>
+<td>dorado</td>
+<td><span style="background-color:#808000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#808000</code></td>
+</tr>
+<tr>
+<td>púrpura</td>
+<td><span style="background-color:#800080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#800080</code></td>
+</tr>
+<tr>
+<td>verde azulado</td>
+<td><span style="background-color:#008080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><code>#008080</code></td>
+</tr>
+</tbody>
+</table>
+<p>Geany proporciona una ventana de diálogo para seleccionar colores y obtener el código correspondiente. Se accede mediante el menú <em>Herramientas &gt; Selector de color</em>:</p>
+<p><img alt="" src="img/10Autocompletar01.png" /></p>
+<p>Pulsando en un color veremos su código, y pulsando en el botón <code>[Seleccionar]</code>, se inserta en el texto del documento.</p>
+<p>Si antes de abrir el cuadro de diálogo tenemos el cursor situado dentro de un texto que represente cualquier código de color, el cuadro de diálogo mostrará ese color como valor inicial.</p>
+<h2 id="insertando-caracteres-especiales">Insertando caracteres especiales<a class="headerlink" href="#insertando-caracteres-especiales" title="Permanent link">&para;</a></h2>
+<p>Si en nuestro documento usamos cualquier codificación Unicode, podemos incluir en el texto más de 150.000 caracteres:</p>
+<div class="codehilite"><pre><span></span><code><span class="c">% $ &amp; A k © ¶ ½ ÷ ‰ ℤ → ∑ ≠ ⏰ ♋ 😀</span>
+</code></pre></div>
+
+<p>Evidentemente, la inmensa mayoría de esos caracteres no están en nuestro teclado. Hay dos formas de introducirlos en un texto:</p>
+<ul>
+<li>Mediante la posibilidad de copiar y pegar, acudiendo a alguna fuente, como es el caso de la <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Wikipedia</a></li>
+<li>Geany incorpora la posibilidad de introducir un carácter si conocemos su código. Para ello, pulsar <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-u">U</kbd></span>, y sin soltar estas teclas, introducir el código hexadecimal seguido de <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</li>
+</ul>
+<p>De todas formas, esto segunda opción no es algo propio de Geany, sino de la biblioteca gráfica GTK, y puede colisionar con otras definiciones de combinaciones de teclas.</p>
+<h2 id="insertar-secuencias-html">Insertar secuencias HTML<a class="headerlink" href="#insertar-secuencias-html" title="Permanent link">&para;</a></h2>
+<p>En documentos HTML es posible representar un carácter mediante una secuencia especial denominada <em>entidad</em>.  Por ejemplo, para un que en un navegador web se muestre un carácter <strong>©</strong> de copyright, en el texto de la página web podemos representarlo mediante la secuencia <code>&amp;copy;</code>. Es decir, si lo que se descarga es:</p>
+<div class="codehilite"><pre><span></span><code>Copyright &amp;copy; texto
+</code></pre></div>
+
+<p>... lo que se ve en el navegador web es:</p>
+<div class="codehilite"><pre><span></span><code>Copyright © texto
+</code></pre></div>
+
+<p>Pero, cuando estamos diseñando la página web y usando el editor para escribir el texto, ¿como recordar la secuencia que representa cada carácter? Geany nos proporciona una lista de los caracteres más comunes pulsando en el menú <em>Herramientas &gt; Insertar caracteres HTML especiales</em>, lo que abre una ventana de diálogo para seleccionar un carácter e insertar en el texto su secuencia asociada.</p>
+<p>Esta opción requiere activar el complemento <em>Caracteres HTML</em>. También permite seleccionar caracteres en el texto y, pulsando sobre <em>Herramientas &gt; Reemplazo HTML</em>, sustituir los caracteres por su correspondiente secuencia HTML. Esto también se puede hacer para todo el documento, no solo el texto seleccionado. En ese caso se respetarán ciertos caracteres que tienen especial significado en la sintaxis HTML:</p>
+<div class="codehilite"><pre><span></span><code>&quot;   &amp;   &lt;   &gt;   (   )
+</code></pre></div>
+
+<p>Podemos definir combinaciones de teclas para hacer estos reemplazos. Usar el menú <em>Editar &gt; Preferencias &gt; Combinaciones</em>.</p>
+<h2 id="texto-de-pruebas">Texto de pruebas<a class="headerlink" href="#texto-de-pruebas" title="Permanent link">&para;</a></h2>
+<p>Al activar el complemento <em>Lipsum</em>, se añade una nueva entrada en el menú Herramientas. Al pulsar sobre esa opción, se insertará un texto de pruebas:</p>
+<blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt mollit anim id est laborum. </p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="09Comandos.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Comandos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Comandos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="11Buscar.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Búsqueda de texto">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Búsqueda de texto
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

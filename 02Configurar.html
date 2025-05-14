@@ -1,0 +1,1258 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/02Configurar.html">
+      
+      
+        <link rel="prev" href="01Espacio.html">
+      
+      
+        <link rel="next" href="03Archivos.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Personalizar Geany - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#personalizar-geany" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Personalizar Geany
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02Configurar.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editar-preferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editar preferencias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-la-visualizacion-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar la visualización de elementos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fuentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pestanas-de-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pestañas de documentos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-numeros-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrar números de línea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuraciones-varias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuraciones varias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración inicial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idioma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idioma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinaciones-de-teclas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinaciones de teclas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar temas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipo-de-letra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipo de letra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamano-y-posicion-de-la-ventana-de-geany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tamaño y posición de la ventana de Geany
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizar-la-barra-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalizar la barra de herramientas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalizar-la-barra-de-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalizar la barra de estado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-foco" class="md-nav__link">
+    <span class="md-ellipsis">
+      El foco
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Edicion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10Autocompletar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11Buscar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13Compilar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14Proyectos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="personalizar-geany">Personalizar Geany<a class="headerlink" href="#personalizar-geany" title="Permanent link">&para;</a></h1>
+<p>Geany cuenta con opciones de configuración que permiten adaptar su funcionamiento a nuestros deseos. Se accede mediante el menú <em>Editar &gt; Preferencias</em>. Los ajustes que hagamos persistirán si cerramos Geany y volvemos a abrirlo. </p>
+<p>Adicionalmente, hay ciertos ajustes que se hacen pulsando en el menú <em>Ver</em>, que también persisten entre sesiones de Geany. Por ejemplo, mostrar u ocultar el panel inferior de mensajes, u otros elementos.</p>
+<p>Existe una tercera forma de configuración, pulsando en el menú Documento. Solo tiene efecto mientras tengamos abierto el fichero actual, y las opciones se revertirán a los valores predeterminados al reiniciar Geany.</p>
+<p>De esta forma, algunas opciones de configuración pueden estar presentes a nivel general o de documento, Por ejemplo, si tenemos una línea de texto más larga que el espacio de visualización, podemos activar el <em>Ajuste de línea</em> para que se muestre completa, partida en varias líneas. Si lo hacemos desde el menú <em>Documento &gt; Ajuste de línea</em>, solo tendrá efecto en la sesión actual. Si lo marcamos mediante <em>Editar &gt; Preferencias &gt; Editor</em>, la configuración se aplicará en futuras sesiones.</p>
+<p>Una cuarta opción de personalización consiste en establecer una configuración específica para determinado proyecto. Un proyecto es un conjunto de documentos, y se puede configurar por separado mediante el menú <em>Proyecto &gt; Propiedades</em>. Lo veremos más adelante, en el capítulo dedicado a proyectos.</p>
+<p>Finalmente, tenemos la posibilidad de editar manualmente algunos de los archivos donde Geany guarda las configuraciones. Esos archivos están accesibles pulsando en el menú <em>Herramientas &gt; Archivos de configuración</em>. Su edición nos obligará a consultar las especificaciones técnicas en el <a href="https://www.geany.org/manual/current/index.html#configuration-files">manual de geany</a>. Veremos que muchas de las líneas de estos archivos van precedidas por un caracter <code>#</code>, lo que desactiva el efecto de esa línea, aplicándose la configuración por defecto. Para personalizarla, suprimir estos caracteres <code>#</code> y ajustar la línea de texto a nuestro gusto. </p>
+<h2 id="editar-preferencias">Editar preferencias<a class="headerlink" href="#editar-preferencias" title="Permanent link">&para;</a></h2>
+<p>Al pulsar sobre el menú <em>Editar &gt; Preferencias</em> se muestra una ventana de diálogo que proporciona varias categorías de elementos a configurar. Esas categorías se muestran en la barra lateral:</p>
+<p><img alt="" src="img/01Espacio03.png" /></p>
+<p>Una vez seleccionada una categoría, en la parte superior hay unas pestañas para acceder a subcategorías. En la imagen vemos que la categoría <em>General</em> tiene dos pestañas, <em>Inicio</em> y <em>Varios</em>. </p>
+<p>Veamos un ejemplo. Supongamos que queremos evitar que cada vez que se inicia Geany, se abran automáticamente los ficheros que había abiertos al cerrar la última sesión. Para ello vamos al menú:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <em>Editar &gt; Preferencias &gt; General &gt; Inicio &gt; Cargar archivos de la última sesión</em></p>
+<p>... y desmarcamos la casilla.  </p>
+<p>Podemos hacer todos los cambios que queramos, que quedarán establecidos para la sesión actual y las próximas. </p>
+<p>En esta ventana de edición de preferencias tenemos tres botones en la esquina inferior derecha:</p>
+<ul>
+<li><em>Cancelar</em>: descarta los cambios y cierra la ventana.</li>
+<li><em>Aceptar</em>: guarda los cambios y cierra la ventana.</li>
+<li><em>Aplicar</em>: guarda los cambios, pero no cierra la ventana, permitiendo cambiar otras configuraciones.</li>
+</ul>
+<p>Muchas opciones de ajuste muestran una burbuja emergente descriptiva si pasamos el ratón sobre el elemento en cuestión, sin llegar a pulsar:</p>
+<p><img alt="" src="img/01Espacio05.png" /></p>
+<h2 id="complementos">Complementos<a class="headerlink" href="#complementos" title="Permanent link">&para;</a></h2>
+<p>Geany puede extender sus capacidades mediante la instalación de complementos, como vimos en el capítulo anterior. Pero inicialmente, no estarán operativos mientras no los activemos. Se hace pulsando en el menú <em>Herramientas &gt; Administrador de complementos</em> y marcando aquellos que deseemos activar.</p>
+<p>Una vez activados, algunos de los complementos incluyen opciones que deben activarse usando el menú <em>Editar &gt; Preferencias de complementos</em>. Para ver las posibilidades de configuración de cada complemento,  consultar su documentación en <a href="https://plugins.geany.org">https://plugins.geany.org</a>.</p>
+<p>Por ejemplo, supongamos que en la barra lateral añadimos la pestaña del <em>Navegador de Archivos</em>. Pero al pulsar sobre esta nueva pestaña, no se muestran los archivos ocultos del sistema. En Linux y Mac, por ejemplo, son aquellos cuyo nombre comienza por un punto. Para activar su visualización, pulsar en el menú <em>Editar &gt; Preferencias de complementos</em>, seleccionar el navegador de archivos, y marcar la casilla <em>Mostrar archivos ocultos</em>.</p>
+<p>Los complementos se cargan al iniciar <em>Geany</em>, siempre que la preferencia <em>General &gt; Activar soporte de complementos</em> está activada.</p>
+<p>Los complementos se instalan en una carpeta por defecto, dependiendo del sistema operativo. Podemos averiguar esa ubicación de la siguiente forma:</p>
+<ul>
+<li>pulsar en el menú <em>Herramientas &gt; Administrador de complementos</em></li>
+<li>en la lista de complementos instalados, pasar el cursor del ratón sobre un complemento </li>
+<li>pasada una fracción de segundo, se muestra un mensaje emergente con información del complemento, incluyendo la ruta del archivo.</li>
+</ul>
+<p>Si tenemos complementos ubicados en una carpeta diferente de la estándar, se puede configurar Geany para que acuda a ella al cargar los complementos al inicio de la sesión. Se establece esta carpeta extra con el menú <em>Editar &gt; Preferencias &gt; General &gt; Rutas &gt; Complementos extra</em>.</p>
+<h2 id="configurar-la-visualizacion-de-elementos">Configurar la visualización de elementos<a class="headerlink" href="#configurar-la-visualizacion-de-elementos" title="Permanent link">&para;</a></h2>
+<p>Pulsando en <em>Editar &gt; Preferencias &gt; Interfaz</em>, podemos personalizar el contenido de la ventana de Geany. Algunas opciones:</p>
+<ul>
+<li>Mostrar barra lateral. Establece si se debe mostrar la barra lateral.</li>
+<li>Mostrar lista de símbolos. Muestra u oculta esa pestaña de la barra lateral.</li>
+<li>Mostrar lista de documentos. Muestra u oculta esa pestaña de la barra lateral.</li>
+<li>Posición de la barra lateral. A la izquierda o a la derecha de la ventana del editor.</li>
+<li>Posición de la ventana de mensajes. En la parte inferior o a la derecha de la ventana del editor.</li>
+<li>Mostrar u ocultar barra de estado. </li>
+</ul>
+<p>Las opciones de mostrar/ocultar elementos también pueden activarse desde el menú <em>Ver</em>.</p>
+<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
+<p>Para establecer la fuente de letra en el editor y resto de paneles, pulsar sobre <em>Editar &gt; Preferencias &gt; Interfaz &gt; Fuentes</em></p>
+<h2 id="pestanas-de-documentos">Pestañas de documentos<a class="headerlink" href="#pestanas-de-documentos" title="Permanent link">&para;</a></h2>
+<p>En el panel de edición, cada documento abierto se selecciona pulsando en su pestaña. Podemos configurar el comportamiento de las pestañas pulsando en <em>Editar &gt; Preferencias &gt; Interfaz &gt; Pestañas</em>:</p>
+<ul>
+<li>
+<p>Mostrar/ocultar pestañas en el editor</p>
+</li>
+<li>
+<p>Mostrar botones de cierre <strong><code>[x]</code></strong> en las pestañas del editor.</p>
+</li>
+<li>
+<p>Posición de nuevas pestañas. Cuando abrimos un archivo, la pestaña se puede situar a la izquierda o a la derecha de todas las existentes, o bien al lado de la actual, en lugar de ubicarla en el extremo.</p>
+</li>
+<li>
+<p>Activar el doble clic para ocultar todos los componentes adicionales. Esto equivale a ejecutar el menú <em>Ver &gt; Activar todos los componentes adicionales</em>, pero si activamos esta opción, basta con hacer doble clic en una pestaña para lograr el mismo efecto. </p>
+<p>Los componentes en cuestión son la barra de iconos, la barra de estado, las pestañas de documentos, y el panel de mensajes. Para volver a visualizarlos, habrá que usar el menú <em>Ver</em>.</p>
+</li>
+<li>
+<p>Longitud de la etiqueta de la pestaña. Si los nombres de archivos son largos, podemos establecer un límite para la cantidad de caracteres a visualizar en cada pestaña.</p>
+</li>
+<li>
+<p>Posición de las pestañas. Por defecto, se ubican en la parte superior del panel, salvo la ventana de mensajes, que muestra las pestalas a la izquierda. Podemos cambiarlas de sitio, y ponerlas a la derecha, izquierda, arriba o abajo de cada panel.</p>
+</li>
+</ul>
+<h2 id="mostrar-numeros-de-linea">Mostrar números de línea<a class="headerlink" href="#mostrar-numeros-de-linea" title="Permanent link">&para;</a></h2>
+<p>Cuando editamos un documento, podemos averiguar la posición del cursor mirando en la barra inferior de estado, donde se indica el número de línea y columna. </p>
+<p>Como alternativa, podemos mostrar una barra lateral en el panel de edición, con los números de línea. Se activa con el menú <em>Editar &gt; Preferencias &gt; Mostrar &gt; Mostrar números de línea</em>.</p>
+<p>Si activamos el ajuste de línea (<em>Preferencias &gt; Editor &gt; Características&gt; Ajuste de línea</em>), el número de línea se refiere a la línea física, no a la mostrada.</p>
+<h2 id="configuraciones-varias">Configuraciones varias<a class="headerlink" href="#configuraciones-varias" title="Permanent link">&para;</a></h2>
+<p>En el apartado "Varios" de la ventana de configuración de Geany, encontraremos una lista de palabras clave en lugar de un texto "civilizado" de lo que significa cada opción:</p>
+<p><img alt="" src="img/01Espacio04.png" /></p>
+<p>Son configuraciones poco utilizadas, que raramente cambiaremos. Por ejemplo, el panel de edición tiene en los bordes dos barras de desplazamiento horizontal y vertical, que permiten desplazar el documento con el ratón (la barra horizontal no se muestra si activamos el ajuste de líneas pulsando en el menú <em>Documento &gt; Ajuste de línea</em>). Podemos desactivar ambas barras de desplazamiento si desmarcamos la casilla <code>editor.show_editor_scrollbars</code> en el cuadro de diálogo de preferencias varias.</p>
+<p>Tenemos una explicación de cada parámetro en el <a href="https://www.geany.org/manual/current/index.html#various-preferences">manual de Geany</a></p>
+<h2 id="configuracion-inicial">Configuración inicial<a class="headerlink" href="#configuracion-inicial" title="Permanent link">&para;</a></h2>
+<p>Cuando Geany se instala en nuestra computadora y se ejecuta  por primera vez, lleva a cabo un reconocimiento del entorno y genera los archivos de configuración por defecto. Se guardan en dos carpetas que depende del sistema operativo:</p>
+<ul>
+<li>una carpeta con la configuración general de Geany</li>
+<li>una segunda carpeta con preferencias a nivel de usuario</li>
+</ul>
+<p>Podemos averiguar cuales son esas carpetas si pulsamos en el menú <em>Ayuda &gt; mensajes de depuración</em>. En las primeras líneas de la lista de mensajes veremos algo así como:</p>
+<div class="codehilite"><pre><span></span><code>System data dir: /usr/share/geany
+User config dir: /home/usuario/.config/geany
+</code></pre></div>
+
+<p>En este ejemplo se trataría de un sistema Linux. </p>
+<h2 id="idioma">Idioma<a class="headerlink" href="#idioma" title="Permanent link">&para;</a></h2>
+<p>Al instalarse en nuestra computadora, Geany se adapta automáticamente para mostrar los menús, textos de las ventanas de diálogo, y otros elementos en el idioma establecido en la configuración local de la máquina. Esto está muy bien, pero dado que el manual de uso está en inglés (accesible mediante el menú <em>Ayuda</em>), a veces puede resultar un poco confuso averiguar a que opción traducida se refiere el manual.</p>
+<p>En principio, Geany no cuenta con opciones para cambiar de idioma, aunque podríamos intentar modificar las variables de entorno del sistema operativo utilizando comandos, y reiniciar Geany. Véase <a href="https://www.geany.org/documentation/faq/#how-can-i-change-the-language-of-the-user-interface">preguntas y respuestas</a> de Geany.</p>
+<h2 id="combinaciones-de-teclas">Combinaciones de teclas<a class="headerlink" href="#combinaciones-de-teclas" title="Permanent link">&para;</a></h2>
+<p>Geany cuanta con unas cuantas combinaciones de teclas que sirven de atajo para todo tipo de operaciones. Por ejemplo:</p>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> para guardar (<em>save</em>) los cambios realizados en el archivo actual</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> para copiar al portapapeles el texto seleccionado</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> para pegar el contenido del portapapeles en la posición del cursor</li>
+</ul>
+<p>Al pulsar sobre la barra de menú, las opciones se despliegan mostrando la combinación de teclas asociada a cada entrada de menú:</p>
+<p><img src="img/01Espacio06.png" width=300px></p>
+<p>Podemos consultar la lista de combinaciones pulsando en el menú <em>Ayuda &gt; Combinaciones de teclas</em>. Tenemos un botón <em>Editar</em> que nos lleva a la ventana de edición de preferencias. Obviamente, podemos hacer esto mismo mediante el menú <em>Editar &gt; Preferencias</em>. En el apartado <em>Combinaciones</em> tenemos una lista de acciones que tienen o pueden tener una combinación de teclas asignada. </p>
+<p>Muchas combinaciones incluyen teclas como <span class="keys"><kbd class="key-control">Ctrl</kbd></span>, <span class="keys"><kbd class="key-alt">Alt</kbd></span> o <span class="keys"><kbd class="key-shift">Shift</kbd></span> (mayúsculas). Existe una tecla especial denominada <code>&lt;primary&gt;</code> que depende del sistema operativo. Suele ser <span class="keys"><kbd class="key-command">Cmd</kbd></span> , <span class="keys"><kbd class="key-windows">Win</kbd></span> o <span class="keys"><kbd class="key-control">Ctrl</kbd></span>.</p>
+<p>Para cambiar las asignaciones, seleccionar la acción correspondiente. Seguidamente pulsar en el botón <em>cambiar</em>. Se nos pedirá que tecleemos la combinación de teclas deseada. Tras hacerlo, pulsamos en el botón <em>aceptar</em>. Si la tecla ya está asignada a otra acción, se nos advertirá, y se nos dará la opción de cancelar la nueva asignación, o hacer la sustitución.</p>
+<h2 id="temas">Temas<a class="headerlink" href="#temas" title="Permanent link">&para;</a></h2>
+<p>Geany se puede configurar para mostrarse con un esquema de colores claro u oscuro:</p>
+<table>
+  <tr>
+    <th>Tema claro</th>
+    <th>Tema oscuro</th>
+  </tr>
+  <tr>
+  <tr>
+    <td><img src="img/01Espacio10.png" width=400px></td>
+    <td><img src="img/01Espacio11.png" width=400px></td>
+  </tr>
+</table>
+
+<p>En sistemas Linux con un escritorio basado en la biblioteca gráfica GTK, la selección de un tema claro/oscuro es automática, y depende de la configuración global del escritorio, afectando a todas las aplicaciones, incluida Geany. En otros sistemas operativos, tendremos que ajustar la configuración de GTK para cambiar de tema.</p>
+<p>De todas formas, Geany utiliza tres esquemas de color simultáneamente:</p>
+<ul>
+<li>El tema aplicado de forma general, que depende de la configuración del escritorio</li>
+<li>
+<p>El tema aplicado en el panel de edición, que se configura por separado. Podemos tener un tema claro en la ventana de Geany, y un esquema de colores oscuro solo para el panel de edición, y viceversa:</p>
+<p><img alt="" src="img/01Espacio12.png" /></p>
+<p>La configuración del editor se establece con el menú <em>Ver &gt; Cambiar esquema de color</em>. Podemos escoger entre <a href="https://www.geany.org/download/themes/">varios temas claros y oscuros</a>, si los tenemos instalados. Si la versión que tenemos de Geany no venía de serie con todos los temas disponibles, habrá que descargarlos.</p>
+</li>
+<li>
+<p>El Terminal de comandos integrado en el panel de mensajes tiene su propia configuración. Pulsar con el botón secundario del ratón en el fondo del terminal, y en el menú desplegable seleccionar <em>Preferencias</em>.</p>
+</li>
+</ul>
+<h2 id="instalar-temas">Instalar temas<a class="headerlink" href="#instalar-temas" title="Permanent link">&para;</a></h2>
+<p>En algunas versiones de Geany (en la de Mac, por ejemplo) los temas claros y oscuros vienen incluidos de serie. En otras, como es el caso de Ubuntu, hay que descargarlos aparte. La página de descargas está en <a href="https://github.com/geany/geany-themes">Github</a>. Pulsar en el botón <code>[Code]</code> y seguidamente en <code>[Download zip]</code>.</p>
+<p>Una vez hecha esta operación, en la carpeta de descargas encontraremos un archivo <code>Geany-themes.zip</code>. Tras extraer su contenido, obtenemos una carpeta <code>Geany-themes</code>, que contiene a su vez una carpeta <code>colorschemes</code>. </p>
+<p>En el editor Geany, pulsando en el menú <em>Ayuda &gt; Mensajes de depuración</em>, averiguamos cual es la carpeta donde se guarda la configuración de usuario, por ejemplo, <code>/home/usuario/.config/geany/</code>. Copiamos la carpeta <code>colorschemes</code> al directorio de usuario, quedándonos con una nueva carpeta <code>/home/usuario/.config/geany/colorschemes/</code> que contiene los temas.</p>
+<p>Tras completar todo esto, reiniciamos Geany y seleccionamos un tema con el menú <em>Ver &gt; Cambiar esquema de color</em>.</p>
+<h2 id="tipo-de-letra">Tipo de letra<a class="headerlink" href="#tipo-de-letra" title="Permanent link">&para;</a></h2>
+<p>Además del esquema de colores, el tipo de letra utilizado para en el panel de edición de documentos es configurable:</p>
+<ul>
+<li>aumentar tamaño de letra: menú <em>Ver &gt; Ampliar</em></li>
+<li>disminuir tamaño de letra: menú <em>Ver &gt; Reducir</em></li>
+<li>cambiar fuente: menú <em>Ver &gt; Cambiar fuente</em></li>
+</ul>
+<p>Para cambiar la fuente utilizada en otros paneles, pulsar en el menú <em>Editar &gt; Preferencias &gt; Interfaz &gt; Fuente</em></p>
+<h2 id="tamano-y-posicion-de-la-ventana-de-geany">Tamaño y posición de la ventana de Geany<a class="headerlink" href="#tamano-y-posicion-de-la-ventana-de-geany" title="Permanent link">&para;</a></h2>
+<p>La opción de menú <em>Ver &gt; Pantalla completa</em> hace que el espacio de trabajo de Geany ocupe toda la pantalla o solo la ventana. Esta, como todas las demás ventanas, se puede mover y cambiar de tamaño.</p>
+<p>Cada vez que iniciamos Geany, la posición y tamaño de la ventana refleja su estado al cerrar la sesión anterior. Esto se puede desactivar mediante el menú <em>Editar &gt; Preferencias &gt; General &gt; Inicio</em>.</p>
+<h2 id="personalizar-la-barra-de-herramientas">Personalizar la barra de herramientas<a class="headerlink" href="#personalizar-la-barra-de-herramientas" title="Permanent link">&para;</a></h2>
+<p>Los iconos que aparecen en la barra de herramientas son atajos a las operaciones utilizadas con mayor frecuencia. La barra se puede configurar desde el menú <em>Editar &gt; Preferencias &gt; Interfaz &gt; Barra de herramientas</em>:</p>
+<ul>
+<li>mostrarla u ocultarla</li>
+<li>tamaño de los iconos</li>
+<li>hacer que incluyan una etiqueta de texto explicativo debajo de cada icono</li>
+</ul>
+<p>Contamos con un botón "Personalizar" para mostrar la lista de iconos incluidos y otros disponibles. Podemos añadir o quitar operaciones para adaptar la barra a nuestro gusto. </p>
+<h2 id="personalizar-la-barra-de-estado">Personalizar la barra de estado<a class="headerlink" href="#personalizar-la-barra-de-estado" title="Permanent link">&para;</a></h2>
+<p>La barra inferior en la ventana de Geany muestra estadísticas del documento actual. Podemos ocultarla o volverla a mostrar con el menú <em>Editar &gt; Preferencias &gt; Interfaz &gt; Varios &gt; Mostrar barra de estado</em>.</p>
+<p>El contenido es una línea de texto que se está refrescando continuamente. Se forma a partir de una plantilla de texto que podemos personalizar mediante el menú <em>Editar &gt; Preferencias &gt; Varios</em>, editando la opción <code>interface.statusbar_template</code>.</p>
+<p>Por ejemplo, si la plantilla es:</p>
+<div class="codehilite"><pre><span></span><code>linea: %l col: %c
+</code></pre></div>
+
+<p>se sustituirá <code>%l</code> por el número de línea, y <code>%c</code> por la columna donde se encuentra el cursor, y en la barra de estado veremos algo así como:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">línea</span><span class="o">:</span><span class="w"> </span><span class="mi">236</span><span class="w">  </span><span class="n">col</span><span class="o">:</span><span class="w"> </span><span class="mi">23</span>
+</code></pre></div>
+
+<p>La plantilla estándar suele mostrar más información:</p>
+<div class="codehilite"><pre><span></span><code>linea: %l / %L\t col: %c\t sel: %s\t %w  %t %mEOL: %M  codif: %e  tipo: %f  ámbito: %S
+</code></pre></div>
+
+<p>¿Que significa todo esto? El texto comienza por la palabra "línea:", que se muestra tal cual. Los espacios en blanco se respetarán, y la secuencia <code>\t</code> indica un carácter de tabulación.</p>
+<p>Si dejamos el parámetro <code>interface.statusbar_template</code> en blanco, se usará este texto por defecto. Podemos establecer nuestra propia plantilla personalizada, considerando que se admiten los siguientes marcadores (cuidado con la distinción entre mayúsculas y minúsculas):</p>
+<ul>
+<li><code>%l</code> El número de línea actual, que comienza en 1</li>
+<li><code>%L</code> El número total de líneas</li>
+<li><code>%c</code> El número de columna actual, que comienza en 0</li>
+<li><code>%C</code> El número de columna actual, que comienza en 1</li>
+<li><code>%s</code> El número de caracteres seleccionados o, si solo se seleccionaron líneas completas, el número de líneas seleccionadas.</li>
+<li><code>%n</code> El número de caracteres seleccionados, incluso si solo se seleccionan líneas completas.</li>
+<li><code>%w</code> Muestra RO cuando el documento está en modo de solo lectura (<em>read only</em>). De lo contrario, muestra si el editor está en modo sobrescribir (OVR) o insertar (INS). Se cambia de modo pulsando la tecla <span class="keys"><kbd class="key-insert">Ins</kbd></span>.</li>
+<li><code>%t</code> Muestra el modo de sangría que se introduce al pulsar <span class="keys"><kbd class="key-tab">Tab</kbd></span>, ya sea tabulaciones (TAB), espacios (SP) o ambos (T/S). En la versión de Geany adaptada al idioma español, muestra "ES" en lugar de "SP".</li>
+<li><code>%m</code> Muestra si el documento está modificado (MOD) o no muestra nada.</li>
+<li><code>%M</code> El carácter usado por defecto como salto de línea (EOF, <em>End Of Line</em>). Depende del sistema operativo y puede ser:<ul>
+<li>LF - <em>line feed</em></li>
+<li>CR - <em>carriage return</em></li>
+<li>doble carácter CR LF, típico de Windows</li>
+</ul>
+</li>
+<li><code>%e</code> El nombre de la codificación del documento (por ejemplo, UTF-8). Ver codificaciones en próximo capítulo.</li>
+<li><code>%f</code> El tipo de archivo del documento (por ejemplo, Python, C, etc.)</li>
+<li><code>%S</code> El nombre del ámbito donde se encuentra el cursor.</li>
+<li><code>%p</code> La posición del cursor en todo el documento comenzando en 0.</li>
+<li><code>%r</code> Muestra si el documento es de solo lectura (RO) o no muestra nada.</li>
+</ul>
+<h2 id="el-foco">El foco<a class="headerlink" href="#el-foco" title="Permanent link">&para;</a></h2>
+<p>Cuando tecleamos algo, el panel que recoge ese texto es aquel que tiene "el foco". Por ejemplo, si pulsamos sobre alguna de las pestañas del panel inferior, por ejemplo, la de <em>Borrador</em> o la <em>Emulación de Terminal</em>, será esta la ventana que tiene el foco.</p>
+<p>Podemos hacer que una ventana obtenga el foco pulsando sobre ella con el ratón. Alternativamente, Geany permite que el foco se adquiera solo con pasar el ratón por encima, sin necesidad de hacer clic. Esta posibilidad ha de activarse mediante el menú <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Foco automático</em>.</p>
+<p>Esto funciona para la ventana del editor principal, el borrador, la emulación de Terminal, y dos apartados en la barra de herramientas, "buscar" e "ir a línea".</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="01Espacio.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Espacio de trabajo">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Espacio de trabajo
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="03Archivos.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Archivos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Archivos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/index.html">
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/01Espacio.html">
       
       
+        <link rel="prev" href="00Intro.html">
       
-        <link rel="next" href="00Intro.html">
+      
+        <link rel="next" href="02Configurar.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>📔 Introducción - El editor de textos Geany</title>
+        <title>📔 Espacio de trabajo - El editor de textos Geany</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-editor-de-textosgeany" class="md-skip">
+        <a href="#espacio-de-trabajo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📔 Introducción
+              📔 Espacio de trabajo
             
           </span>
         </div>
@@ -343,7 +345,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link md-nav__link--active">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -354,7 +356,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -394,10 +396,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="01Espacio.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01Espacio.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -406,6 +428,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espacio-de-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Espacio de trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-de-edicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel de edición
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-lateral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel lateral
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel inferior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complementos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimapa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dividir-ventana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dividir ventana
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -750,13 +864,83 @@
   
 
 
-<p><img src="img/logo.png" style="float:right; padding-right:30px"></p>
-<h1 id="el-editor-de-textosgeany" style="text-shadow: 2px 2px #000000; text-align:left;">El editor de textos<br>Geany<a class="headerlink" href="#el-editor-de-textosgeany" title="Permanent link">&para;</a></h1>
-<p>Han pasado muchos años desde mi primer contacto con un ordenador, y a lo largo de todo este tiempo he tenido ocasión de usar diferentes editores para escribir archivos de texto. Algunos de los más populares me han parecido algo complejos, otros los encuentro frustrantes por no adecuarse a lo que ando buscando, y con frecuencia vuelvo a mi viejo Geany, un sencillo editor que fue concebido en 2005 para el sistema operativo Linux, y del que actualmente existen versiones para sistemas tipo Unix, Mac o incluso para Windows.</p>
-<p>Geany puede parecer algo simple a primera vista, pero si lo exploramos a conciencia, veremos que esconde multitud de funciones de utilidad. Se distribuye como software libre, y es desarrollado por un <a href="https://geany.org/about/geany/">equipo de colaboradores</a>. Su página web es <a href="https://geany.org">https://geany.org</a>.</p>
-<p>En esta notas intentaré plasmar un resumen de mi experiencia con Geany ejecutándose en un sistema Linux. En <a href="https://trezebits.github.io/tutorial_linux_en_mac/">otro cuaderno de mi colección</a> explico como he instalado el sistema operativo Linux en mi computadora.
-<br><br><br><br></p>
-<p style="text-align:right;color:cadetblue">Fecha última actualización de este cuaderno: 14-may-2025</p>
+<h1 id="espacio-de-trabajo">Espacio de trabajo<a class="headerlink" href="#espacio-de-trabajo" title="Permanent link">&para;</a></h1>
+<p>En este cuaderno examinaremos el funcionamiento de Geany ejecutándose en un sistema operativo Linux, aunque los contenidos son igualmente válidos para otros sistemas.</p>
+<h2 id="inicio">Inicio<a class="headerlink" href="#inicio" title="Permanent link">&para;</a></h2>
+<p>Dependiendo del sistema operativo, Geany se inicia pulsando con el ratón en el escritorio, bien en el menú de aplicaciones, o sobre el icono de Geany:</p>
+<p><img alt="" src="img/logo.png" style="width:100px" /> </p>
+<p>o bien desde el terminal de comandos, tecleando el comando:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>geany
+</code></pre></div>
+
+<h2 id="espacio-de-trabajo_1">Espacio de trabajo<a class="headerlink" href="#espacio-de-trabajo_1" title="Permanent link">&para;</a></h2>
+<p>Una vez iniciado, la ventana de Geany muestra algo así como:</p>
+<p><img alt="" src="img/01Espacio01.png" /></p>
+<p>El aspecto de los iconos, colores, etc. depende de la configuración del sistema operativo. El espacio de trabajo está formado por siete partes:</p>
+<ul>
+<li>La barra de título de la ventana muestra la palabra <em>Geany</em> precedida por el nombre del archivo que estamos editando, en estre ejemplo, "sin título", por ser un documento nuevo.</li>
+<li>Debajo tenemos la barra con opciones de menú. Las opciones se despliegan de la forma habitual, pulsando con el ratón. Dependiendo del sistema operativo, podemos usar la tecla <span class="keys"><kbd class="key-f10">F10</kbd></span> para mostrar el primer menú, seguidamente <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> y <span class="keys"><kbd class="key-arrow-left">Left</kbd></span>  para pasar a los menús adyacentes, <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> y <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> para seleccionar una opción, y <span class="keys"><kbd class="key-enter">Enter</kbd></span> para ejecutar el comando asociado. </li>
+<li>Debajo de la barra de menú tenemos una barra de iconos llamada <em>barra de herramientas</em> (toolbar) que se utiliza como atajo para las operaciones más frecuentes. Se puede ocultar o volver a mostrar pulsando en el menú <em>Ver &gt; Mostrar barra de herramientas</em></li>
+<li>En el borde inferior de la ventana, la barra de estado muestra información sobre el documento que estamos editando. Se puede ocultar con el menú <em>Editar &gt; Preferencias &gt; Interfaz &gt; Varios &gt; Mostrar barra de estado</em>.</li>
+</ul>
+<p>El resto del espacio se divide en tres paneles de trabajo:</p>
+<ul>
+<li>El panel principal de edición de documentos, en el centro, a la derecha.</li>
+<li>Los paneles lateral e inferior contienen herramientas de utilidad, listas de archivos para seleccionar uno u otro, visualización de mensajes, etc. Esos paneles se pueden redimensionar arrastrando la línea divisoria entre ellos. Podemos ocultarlos o volverlos a mostrar pulsando en el menú <em>Ver &gt; Mostrar barra lateral</em> o en <em>Ver &gt; Mostrar ventana de mensajes</em>.</li>
+</ul>
+<p>Podemos llevar el panel lateral al lado derecho de la ventana mediante el menú <em>Editar &gt; Preferencias &gt; Interfaz &gt; Barra lateral &gt; Posición derecha</em>.</p>
+<p>La opción de menú <em>Ver &gt; Mostrar/Ocultar componentes adicionales</em> permite ocultar o mostrar en una sola operación:</p>
+<ul>
+<li>el panel inferior de mensajes</li>
+<li>la barra de iconos (barra de herramientas)</li>
+<li>la barra de estado</li>
+</ul>
+<h2 id="panel-de-edicion">Panel de edición<a class="headerlink" href="#panel-de-edicion" title="Permanent link">&para;</a></h2>
+<p>El panel principal de edición sirve, como era de esperar, para editar el texto de los ficheros:</p>
+<p><img alt="" src="img/01Espacio02.png" /></p>
+<p>Podemos tener abiertos varios archivos a a vez, seleccionables mediante pestañas. Cada pestaña muestra el nombre del archivo y un icono <strong><code>[x]</code></strong> para cerrarlo. Los documentos con cambios pendientes de guardar muestran el texto de la pestaña en rojo (o en el color que establezcamos si cambiamos la configuración). </p>
+<p>Las pestañas se van colocando de izquierda a derecha a medida que abrimos o creamos nuevos archivos. Se pueden arrastrar con el ratón para cambiarlas de orden. </p>
+<p>Para crear un archivo de texto nuevo, pulsar en el menú <em>Archivo &gt; Nuevo</em>. El nombre del documento será <em>untitled</em> hasta que lo guardemos y le asignemos su nombre definitivo.</p>
+<p>Para guardar el texto de un archivo, pulsar en el menú <em>Archivo &gt; Guardar</em>. Si es la primera vez que lo guardamos, se  mostrará una ventana de diálogo para seleccionar una carpeta y nombre de fichero.</p>
+<p>Para abrir un archivo existente, pulsar en el menú <em>Archivo &gt; Abrir</em>. Se  mostrará una ventana de diálogo para buscar el fichero por la estructura de carpetas.</p>
+<h2 id="panel-lateral">Panel lateral<a class="headerlink" href="#panel-lateral" title="Permanent link">&para;</a></h2>
+<p>El panel lateral muestra inicialmente dos pestañas:</p>
+<ul>
+<li>
+<p>Documentos. Es una lista de los documentos abiertos para su edición. Sirve para seleccionarlos en lugar de pulsar sobre las pestañas.</p>
+</li>
+<li>
+<p>Símbolos. Muestra una lista de los elementos que hay en el texto del documento actual, y permite desplazarse entre ellos. Por ejemplo, si estamos editando un programa, podremos ver la lista de funciones, variables, etc. Depende del lenguaje de programación utilizado.</p>
+</li>
+</ul>
+<p>El panel lateral puede contar con más pestañas si instalamos y activamos complementos de Geany.</p>
+<h2 id="panel-inferior">Panel inferior<a class="headerlink" href="#panel-inferior" title="Permanent link">&para;</a></h2>
+<p>El panel inferior muestra inicialmente cinco pestañas:</p>
+<ul>
+<li>Estado - Muestra mensajes de actividad. Aquí es donde podemos examinar todo lo que Geany está haciendo.</li>
+<li>Mensajes - Muestra los resultados de operaciones llevadas a cabo, tales como búsqueda y sustitución de texto.</li>
+<li>Borrador - Este es un espacio para escribir notas varias. Cada vez que cerremos la sesión de Geany y volvamos a abrirla, el texto se mantendrá intacto.</li>
+<li>Terminal - Aquí tenemos una emulación del terminal de comandos del sistema operativo (VTE, <em>Virtual terminal emulator</em>). Podemos usarla como alternativa a abrir el Terminal en una ventana aparte. En el momento de escribir este cuaderno, <a href="https://wiki.geany.org/howtos/win32/running">no está disponible en la versión Windows</a>.</li>
+<li>Mensajes de compilación. Muestra los mensajes que se generan si escribimos programas y los compilamos usando las opciones del menú <em>Construir</em>.</li>
+</ul>
+<p>Este panel inferior puede contar con más pestañas si instalamos y activamos complementos de Geany.</p>
+<p>Podemos configurar Geany para que, cada vez que haya un nuevo mensaje en la pestaña de mensajes, esta se seleccione automáticamente. Para ello usar el menú <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Cambiar a la ventana de mensajes cuando haya uno nuevo</em>. De todas formas, esto no visualiza el panel inferior si lo tenemos oculto (aunque se selecciona la pestaña de todas formas).</p>
+<h2 id="complementos">Complementos<a class="headerlink" href="#complementos" title="Permanent link">&para;</a></h2>
+<p>Las capacidades de Geany pueden ampliarse mediante la instalación de complementos, bien los creados por el propio equipo de Geany, o bien los desarrollados por terceros. Tenemos una lista de complementos en <a href="https://plugins.geany.org">https://plugins.geany.org</a>. Algunos vienen instalados de serie.</p>
+<p>Para que un complemento tenga efecto, se requieren tres pasos:</p>
+<ul>
+<li>descargarlo e instalarlo, siguiendo <a href="https://plugins.geany.org/install.html">instrucciones en la documentación</a>.</li>
+<li>activarlo con el menú <em>Herramientas &gt; Administrador de complementos</em></li>
+<li>activar determinadas funciones del complemento con <em>Editar &gt; Preferencias de complementos</em></li>
+</ul>
+<p>Como ejemplo, un complemento interesante es el navegador de archivos. Añade una nueva pestaña "<em>Archivos</em>" al panel lateral, que permite desplazarse por la estructura completa de carpetas del disco (la pestaña <em>documentos</em> solo muestra una lista de los archivos abiertos). </p>
+<h2 id="minimapa">Minimapa<a class="headerlink" href="#minimapa" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Overview</em> proporciona un panel lateral a la derecha del editor con una vista general del documento. Tenemos la documentación en <a href="https://github.com/codebrainz/overview-plugin/">https://github.com/codebrainz/overview-plugin/</a></p>
+<p>Una vez activado, se puede configurar pulsando en el menú <em>Editar &gt; Preferencias de complementos</em>. Podemos ocultarlo o mostrarlo pulsando en <em>Ver &gt; ShowOverview</em>.</p>
+<h2 id="dividir-ventana">Dividir ventana<a class="headerlink" href="#dividir-ventana" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Dividir ventana</em> permite obtener dos vistas simultáneas de documentos, dividiendo el panel de edición horizontal o verticalmente. Una vez activado el complemento, la división se hace pulsando en el menú <em>Herramientas &gt; Dividir ventana</em>:</p>
+<p><img alt="" src="img/01Espacio13.png" /></p>
+<p>En el primer panel tenemos los documentos abiertos, seleccionables mediante pestañas. En el segundo, tenemos una lista desplegable que permite seleccionar uno de los archivos del primer panel. Podemos comparar el texto de dos archivos, o incluso ver el mismo archivo en ambas ventanas, contrastando dos fragmentos diferentes. Este segundo panel se cierra mediante un icono <strong>[x]</strong> en su cabecera.</p>
 
 
 
@@ -791,15 +975,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
+          
+          <a href="00Intro.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Acerca de Geany">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Acerca de Geany
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="00Intro.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Acerca de Geany">
+          <a href="02Configurar.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Personalizar Geany">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                📔 Acerca de Geany
+                📔 Personalizar Geany
               </div>
             </div>
             <div class="md-footer__button md-icon">

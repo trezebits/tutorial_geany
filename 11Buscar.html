@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/11Buscar.html">
+      
+      
+        <link rel="prev" href="10Autocompletar.html">
+      
+      
+        <link rel="next" href="12Simbolos.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Búsqueda de texto - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#busqueda-de-texto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Búsqueda de texto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Configurar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Edicion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10Autocompletar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="11Buscar.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-mediante-barra-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar mediante barra de herramientas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-mediante-opciones-de-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar mediante opciones de menú
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-desde-el-inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar desde el inicio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ocultar-ventana-de-dialogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ocultar ventana de diálogo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texto-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texto por defecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar selección
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marcar-palabras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marcar palabras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encontrar-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encontrar uso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buscar-en-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buscar en archivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reemplazar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reemplazar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ir-a-la-definicion-del-simbolo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ir a la definición del símbolo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ir-a-la-declaracion-de-simbolos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ir a la declaración de símbolos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expresiones-regulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expresiones regulares
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13Compilar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14Proyectos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="busqueda-de-texto">Búsqueda de texto<a class="headerlink" href="#busqueda-de-texto" title="Permanent link">&para;</a></h1>
+<p>Como cualquier editor que se precie, Geany cuenta con funcionalidades varias para encontrar un fragmento de texto en los documentos. Aquí veremos las diferentes opciones.</p>
+<h2 id="buscar-mediante-barra-de-herramientas">Buscar mediante barra de herramientas<a class="headerlink" href="#buscar-mediante-barra-de-herramientas" title="Permanent link">&para;</a></h2>
+<p>La barra de herramientas tiene una caja de texto para introducir texto a buscar. Es la que tiene un botón "lupa" a su derecha:</p>
+<p><img alt="" src="img/11Buscar01.png" /></p>
+<p>A medida que tecleamos algo en esa caja, Geany muestra resaltada en el texto del documento la primera coincidencia que encuentre. Pulsando en el icono adyacente con forma de lupa, se muestran las sucesivas coincidencias.</p>
+<p>Manteniendo el cursor en la caja de búsqueda, <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace búsquedas sucesivas, mientras que <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> lo hace hacia atrás.</p>
+<p>La búsqueda es <em>case-insensitive</em>. No se distingue entre mayúsculas y minúsculas. Si queremos una búsqueda más elaborada, usar la opción de menú <em>Buscar</em>.</p>
+<h2 id="buscar-mediante-opciones-de-menu">Buscar mediante opciones de menú<a class="headerlink" href="#buscar-mediante-opciones-de-menu" title="Permanent link">&para;</a></h2>
+<p>El menú <em>Buscar</em> abre una caja de diálogo para buscar texto en uno o más documentos. La ventana de diálogo permite introducir las especificaciones de búsqueda:</p>
+<p><img alt="" src="img/11Buscar02.png" /></p>
+<p>Introducimos el texto a buscar y vamos pulsando en los botones <code>[Siguiente]</code> para ir saltando de una a otra coincidencia encontrada, o <code>[Anterior]</code> para buscar hacia atrás. </p>
+<p>Podemos seguir editando el texto con la ventana de diálogo abierta. La ocultamos con el botón <code>[Cerrar]</code>. Se puede configurar para que se cierre automáticamente al pulsar en los botones <em>siguiente/anterior</em>. Se hace con el menú <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Buscar &gt; Ocultar diálogo de búsquedas</em>.</p>
+<p>En la ventana de diálogo tenemos una opción "usar secuencias de escape", que permite incluir en el texto de búsqueda unas secuencias especiales de caracteres, que representan determinado carácter. Por ejemplo, si buscamos:</p>
+<div class="codehilite"><pre><span></span><code>Hola\nAdios
+</code></pre></div>
+
+<p>La secuencia <code>\n</code> representa un salto de línea, por lo que se buscará un texto de diez caracteres, siendo el quinto el de salto (<em>new line</em>):</p>
+<div class="codehilite"><pre><span></span><code>H  o  l  a  salto  A  d  i  o  s
+</code></pre></div>
+
+<p>Otras secuencias de escape de interés son:</p>
+<ul>
+<li><code>\t</code> indica un carácter de tabulación.</li>
+<li>
+<p><code>\uXXXX</code> representa un carácter Unicode mediante su código hexadecimal <code>XXXX</code> Por ejemplo, la letra griega PI (π) se indica mediante la secuencia:</p>
+<div class="codehilite"><pre><span></span><code>\u03C0
+</code></pre></div>
+
+<p>¿Cuales son los códigos que corresponden a cada carácter? Internet tiene multitud de páginas de consulta. Por ejemplo, la <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Wikipedia</a>.</p>
+</li>
+<li>
+<p><code>\\</code> representa una barra invertida. Esto es necesario para considerar la barra como un carácter más a buscar, no como inicio de una <em>secuencia de escape</em>. Por ejemplo, si introducimos:</p>
+<div class="codehilite"><pre><span></span><code>texto1\\texto2
+</code></pre></div>
+
+<p>se buscará el texto:</p>
+<div class="codehilite"><pre><span></span><code>texto1\texto2
+</code></pre></div>
+
+</li>
+</ul>
+<p>En la ventana de diálogo tenemos un desplegable "Buscar todos", que muestra u oculta las opciones para buscar todas las coincidencias en un solo paso. Pueden ser:</p>
+<ul>
+<li>Si seleccionamos <em>En el documento</em>, muestra una lista de líneas coincidentes en la ventana de mensajes.</li>
+<li>Si seleccionamos <em>En la sesión</em>, hace lo mismo para todos los documentos abiertos </li>
+<li>Pulsando sobre <em>Marcar</em> muestra todas las coincidencias en la ventana de edición, resaltándolas coloreadas en el texto del documento. Las marcas desaparecen mediante el menú <em>Documento &gt; Borrar marcas</em>.</li>
+</ul>
+<h2 id="buscar-desde-el-inicio">Buscar desde el inicio<a class="headerlink" href="#buscar-desde-el-inicio" title="Permanent link">&para;</a></h2>
+<p>Cuando la búsquedas llega al final del documento, se pregunta si queremos continuar volviendo al inicio del texto de nuevo. Este comportamiento puede establecerse por defecto, sin necesidad de preguntar.  Se configura con <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Buscar &gt; Reiniciar búsqueda</em>.</p>
+<h2 id="ocultar-ventana-de-dialogo">Ocultar ventana de diálogo<a class="headerlink" href="#ocultar-ventana-de-dialogo" title="Permanent link">&para;</a></h2>
+<p>Cuando se encuentra una coincidencia, se mantiene abierta la ventana de diálogo de  búsquedas, para seguir pulsando en los botones <em>Anterior/Siguiente</em>. Podemos establecer que se cierre la ventana automáticamente con <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Buscar &gt; Ocultar diálogo de búsqueda</em>.</p>
+<h2 id="texto-por-defecto">Texto por defecto<a class="headerlink" href="#texto-por-defecto" title="Permanent link">&para;</a></h2>
+<p>Al abrir la ventana de diálogo de búsquedas, podemos poner automáticamente en el campo de texto a buscar la palabra donde se encuentra el cursor.  Este comportamiento puede establecerse con <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Buscar &gt; Usar la palabra bajo el cursor</em>.</p>
+<h2 id="buscar-seleccion">Buscar selección<a class="headerlink" href="#buscar-seleccion" title="Permanent link">&para;</a></h2>
+<p>El menú <em>Buscar siguiente/anterior</em> realiza una búsqueda del texto tomando el seleccionado actualmente en el documento actual. Si no hemos seleccionado nada, por defecto se utiliza la palabra actual en su lugar. Esto se puede personalizar mediante la edición de preferencias, apartado "varios", palabra clave <code>find_selection_type</code>:</p>
+<table>
+<thead>
+<tr>
+<th> Valor</th>
+<th>comportamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Usa la palabra actual (por defecto).</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Prueba primero la selección, luego la palabra actual.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Repite la última búsqueda.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="marcar-palabras">Marcar palabras<a class="headerlink" href="#marcar-palabras" title="Permanent link">&para;</a></h2>
+<p>Ya hemos visto que la ventana de búsqueda tiene la opción de mostrar coloreadas todas las coincidencias encontradas de un texto.</p>
+<p>Hay dos complementos de Geany que podemos instalar y activar, y que hacen algo parecido. El complemento <a href="https://plugins.geany.org/addons.html">Addons</a> tiene una opción "<em>Mark all occurrences of a word when double-clicking it</em>" que, si la activamos en la configuración del complemento, al hacer doble clic sobre una palabra del documento se resaltan todas las coincidencias en el texto. </p>
+<p>De forma similar, el complemento <a href="https://plugins.geany.org/automark.html">Automarcar</a> resalta las palabras coincidentes sin necesidad de hacer doble clic ni usar el menú. Basta con pasar el ratón sobre la palabra en cuestión.</p>
+<h2 id="encontrar-uso">Encontrar uso<a class="headerlink" href="#encontrar-uso" title="Permanent link">&para;</a></h2>
+<p>La opción de menú <em>Buscar &gt; Encontrar uso</em> busca en todos los archivos abiertos. Es similar a abrir el cuadro de diálogo <em>Buscar</em>, seleccionar la opción <em>Buscar todos</em>, y seguidamente pulsar <em>En la sesión</em>.</p>
+<p>Si hay una selección, entonces se usa como texto de búsqueda; de lo contrario, se utiliza la palabra actual. La palabra actual se toma de la palabra más cercana al cursor de edición, o de la palabra debajo de la posición de clic del menú emergente cuando se usa el menú emergente. Los resultados de la búsqueda se muestran en la pestaña Mensajes de la ventana de mensajes.</p>
+<p>También podemos usar <em>Buscar uso</em> utilizando el menú emergente al pulsar con el botón secundario del ratón sobre el texto del documento.</p>
+<h2 id="buscar-en-archivos">Buscar en archivos<a class="headerlink" href="#buscar-en-archivos" title="Permanent link">&para;</a></h2>
+<p>La opción de menú <em>Buscar &gt; Buscar en archivos</em> muestra una ventana de diálogo para buscar texto en todos los archivos de un directorio:</p>
+<p><img alt="" src="img/11Buscar03.png" /></p>
+<p>El texto a buscar se establece inicialmente tomando la palabra actual en el editor (dependiendo de las preferencias de búsqueda).</p>
+<p>Entre las opciones disponibles podemos seleccionar el tipo de archivo a examinar (se ignorarán el resto de ficheros):</p>
+<ul>
+<li>todos: buscar en todos los archivos del directorio que se indica</li>
+<li>proyecto: buscar seleccionando archivos de acuerdo a los ajustes del proyecto actual</li>
+<li>personalizado: introducir a continuación los tipos de archivo a examinar.</li>
+</ul>
+<p>Cuando elegimos "proyecto", o patrones personalizados, hay que indicar el tipo de archivo. Por ejemplo:</p>
+<div class="codehilite"><pre><span></span><code>*.txt
+</code></pre></div>
+
+<p>buscaría en los archivos cuyo sufijo sea <code>.txt</code>.</p>
+<p>Se puede estalecer una lista de patrones, utilizando una sintaxis de <a href="https://es.wikipedia.org/wiki/Glob">estilo glob</a>, con cada patrón separado por un espacio. Por ejemplo, para buscar todos los archivos .c y .h, utilizar: </p>
+<div class="codehilite"><pre><span></span><code>*.c *.h
+</code></pre></div>
+
+<p>Téngase en cuenta que una lista de patrones vacía busca en todos los archivos en lugar de en ninguno.</p>
+<p>En la ventana de diálogo, el campo <em>directorio</em> se establece inicialmente en el directorio del documento actual, a menos que este campo se haya modificado en una búsqueda anterior y el documento actual no haya cambiado. De lo contrario, el directorio del documento actual se antepone a los del historial desplegable. Esto se puede desactivar en las preferencias de búsqueda, pulsando en <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Buscar</em>.</p>
+<p>El campo de codificación se puede utilizar para indicar la codificación de los archivos a examinar. El texto de búsqueda ingresado se convertirá a la codificación elegida y los resultados de la búsqueda se convierten de nuevo a UTF-8.</p>
+<p>La búsqueda se ejecuta haciendo uso del comando <code>grep</code> propio del sistema operativo. En la ventana de diálogo de <em>Preferencias &gt; Herramientas</em> hay que establecer la ruta del comando <code>grep</code> del sistema.</p>
+<p>En la ventana de búsquedas, el campo de opciones extra se utiliza para pasar cualquier argumento adicional al comando grep.</p>
+<h2 id="reemplazar">Reemplazar<a class="headerlink" href="#reemplazar" title="Permanent link">&para;</a></h2>
+<p>El cuadro de diálogo <em>Reemplazar</em> se utiliza para reemplazar texto en uno o más documentos abiertos. Tiene las mismas opciones de coincidencia de texto que la ventana de búsqueda.</p>
+<p>Para reemplazar varias coincidencias, haga clic en <em>Reemplazar todo</em>. Esto mostrará varias opciones:</p>
+<ul>
+<li>En el documento</li>
+<li>En la sesión</li>
+<li>En selección</li>
+</ul>
+<p>La primera opción, <em>En el documento</em>, reemplazará todo el texto que coincida en el documento actual. <em>Reemplazar todo en sesión</em> hace lo mismo para todos los documentos abiertos. </p>
+<p><em>Reemplazar selección</em> reemplazará todo el texto coincidente en la selección actual del documento actual.</p>
+<h2 id="ir-a-la-definicion-del-simbolo">Ir a la definición del símbolo<a class="headerlink" href="#ir-a-la-definicion-del-simbolo" title="Permanent link">&para;</a></h2>
+<p>Si la palabra donde se encuentra el cursor, o la selección actual, es un nombre definido como símbolo (por ejemplo, un nombre de función en un programa que estamos escribiendo) y el archivo que contiene la definición de ese símbolo está abierto, este comando del menú <em>Buscar</em> cambiará a ese archivo e irá al número de línea correspondiente (la palabra actual es la más cercana al cursor de edición, o la palabra debajo de la posición del menú emergente al hacer clic con el botón secundario del ratón).</p>
+<p>Si hay más símbolos con el mismo nombre, se muestra una ventana emergente con una lista de todas las coincidencias. Después de seleccionar un símbolo de la lista, Geany salta a la ubicación del símbolo correspondiente. Geany intenta sugerir el símbolo más cercano (símbolo del archivo actual, otros documentos abiertos o directorio actual) como el mejor candidato y coloca este símbolo al principio de la lista escrita en negrita.</p>
+<h2 id="ir-a-la-declaracion-de-simbolos">Ir a la declaración de símbolos<a class="headerlink" href="#ir-a-la-declaracion-de-simbolos" title="Permanent link">&para;</a></h2>
+<p>Este comando del menú Buscar funciona como <em>Ir a la definición de símbolos</em>, pero para una declaración en aquellos lenguajes que distinguen entre definiciones y declaraciones.</p>
+<p>Por ejemplo, en lenguaje C, irá al prototipo de una función, o una declaración <code>extern</code>, en lugar de al cuerpo de la función.</p>
+<h2 id="expresiones-regulares">Expresiones regulares<a class="headerlink" href="#expresiones-regulares" title="Permanent link">&para;</a></h2>
+<p>Los cuadros de diálogo de Buscar y Reemplazar tienen una casilla "Usar expresiones regulares", que por defecto no está activada. Si la activamos, podemos usar una expresión regular como texto a buscar.</p>
+<p>Una expresión regular es un texto con comodines. Por ejemplo, si tecleamos como texto a buscar</p>
+<div class="codehilite"><pre><span></span><code>texto[123]x
+</code></pre></div>
+
+<p>se buscará todas lo que coincida con <em>texto1x</em>, <em>texto2x</em> o <em>texto3x</em></p>
+<p>La sintaxis de las expresiones regulares es compleja, y su descripción daría lugar a un libro completo. Podemos obtener más información en la <a href="https://www.geany.org/manual/gtk/glib/glib-regex-syntax.html">referencia</a> de la biblioteca Glib, usada por Geany. El manual del editor describe parte de la <a href="https://www.geany.org/manual/current/index.html#regular-expressions">sintaxis básica</a></p>
+<p>Nota: no se admite la búsqueda hacia atrás con expresiones regulares.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="10Autocompletar.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Completado de texto">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Completado de texto
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="12Simbolos.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Símbolos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Símbolos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

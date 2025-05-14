@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/index.html">
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/06Codificacion.html">
       
       
+        <link rel="prev" href="05Terminal.html">
       
-        <link rel="next" href="00Intro.html">
+      
+        <link rel="next" href="07Edicion.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>📔 Introducción - El editor de textos Geany</title>
+        <title>📔 Codificación - El editor de textos Geany</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-editor-de-textosgeany" class="md-skip">
+        <a href="#codificacion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📔 Introducción
+              📔 Codificación
             
           </span>
         </div>
@@ -343,7 +345,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link md-nav__link--active">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -354,7 +356,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -499,10 +501,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="06Codificacion.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="06Codificacion.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -511,6 +533,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#codificaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codificaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detectar-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detectar codificación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deteccion-a-partir-del-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detección a partir del texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guardar-con-otra-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardar con otra codificación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-nuevos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos nuevos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-byte-order-mark-bom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode Byte-Order-Mark (BOM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saltos-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saltos de línea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizar-saltos-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizar saltos de línea
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -750,13 +864,95 @@
   
 
 
-<p><img src="img/logo.png" style="float:right; padding-right:30px"></p>
-<h1 id="el-editor-de-textosgeany" style="text-shadow: 2px 2px #000000; text-align:left;">El editor de textos<br>Geany<a class="headerlink" href="#el-editor-de-textosgeany" title="Permanent link">&para;</a></h1>
-<p>Han pasado muchos años desde mi primer contacto con un ordenador, y a lo largo de todo este tiempo he tenido ocasión de usar diferentes editores para escribir archivos de texto. Algunos de los más populares me han parecido algo complejos, otros los encuentro frustrantes por no adecuarse a lo que ando buscando, y con frecuencia vuelvo a mi viejo Geany, un sencillo editor que fue concebido en 2005 para el sistema operativo Linux, y del que actualmente existen versiones para sistemas tipo Unix, Mac o incluso para Windows.</p>
-<p>Geany puede parecer algo simple a primera vista, pero si lo exploramos a conciencia, veremos que esconde multitud de funciones de utilidad. Se distribuye como software libre, y es desarrollado por un <a href="https://geany.org/about/geany/">equipo de colaboradores</a>. Su página web es <a href="https://geany.org">https://geany.org</a>.</p>
-<p>En esta notas intentaré plasmar un resumen de mi experiencia con Geany ejecutándose en un sistema Linux. En <a href="https://trezebits.github.io/tutorial_linux_en_mac/">otro cuaderno de mi colección</a> explico como he instalado el sistema operativo Linux en mi computadora.
-<br><br><br><br></p>
-<p style="text-align:right;color:cadetblue">Fecha última actualización de este cuaderno: 14-may-2025</p>
+<h1 id="codificacion">Codificación<a class="headerlink" href="#codificacion" title="Permanent link">&para;</a></h1>
+<p>Todo archivo de texto se guarda en disco mediante una secuencia de códigos numéricos, uno por cada carácter. De esta forma, si el contenido de un documento es el siguiente texto:</p>
+<div class="codehilite"><pre><span></span><code>Hola
+</code></pre></div>
+
+<p>... a cada letra del alfabeto le corresponde un código, y lo que se guarda en disco es lo siguiente:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">72</span><span class="w"> </span><span class="mf">111</span><span class="w"> </span><span class="mf">108</span><span class="w"> </span><span class="mf">97</span>
+</code></pre></div>
+
+<p>Aunque en realidad, los códigos se transformarán a su equivalente en sistema de numeración binario:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">01001000</span><span class="w"> </span><span class="mf">01101111</span><span class="w"> </span><span class="mf">01101100</span><span class="w"> </span><span class="mf">01100001</span>
+</code></pre></div>
+
+<h2 id="codificaciones">Codificaciones<a class="headerlink" href="#codificaciones" title="Permanent link">&para;</a></h2>
+<p>¿Quien establece el código asignado a cada letra? En los inicios de la informática, cada fabricante de ordenadores tenía su propia codificación, pero cuando surgió la necesidad de intercambiar datos entre computadoras, se cayó en la cuenta de que lo que se transmite son ceros y unos, que pueden ser malinterpretados por la máquina receptora. Hubo que llegar a un acuerdo y adoptar una codificación estándar.</p>
+<p>En las primeras décadas de la informática, la codificación más popular fue ASCII, abreviatura de <em>Código Estándar Americano para Intercambio de Información</em>. Véase una lista de los códigos asignados a cada carácter en la <a href="https://es.wikipedia.org/wiki/ASCII#Caracteres_imprimibles_ASCII">Wikipedia</a>.</p>
+<p>ASCII no contempla caracteres más allá del inglés. La <strong>ñ</strong> española, las francesas <strong>æ</strong> y <strong>œ</strong>, la alemana <strong>ß</strong> o las vocales acentuadas no están incluidas. Con el paso de los años, fueron apareciendo otras codificaciones alternativas, hasta que en la década de 1980 nació un grupo de trabajo impulsado por Xerox y Apple, para elaborar una propuesta de codificación que recoja todos los idiomas del mundo, símbolos matemáticos, técnicos, musicales, iconos, emojis, y un largo etcétera.</p>
+<p>El proyecto fue finalmente asumido por el <a href="https://es.wikipedia.org/wiki/Consorcio_Unicode">consorcio UNICODE</a>, creado para ese propósito en 1991, e integrado actualmente por importantes empresas, como Apple, Google, IBM o Microsoft, por ejemplo. A lo largo de los años, UNICODE ha ido desarrollando tres codificaciones principales, UTF8, UTF16 y UTF32 (<em>Unicode Transformation Format</em>).</p>
+<p>Por defecto, y salvo que cambiemos la configuración de Geany, la codificación utilizada suele ser UTF8. De todas formas, cada documento puede guardarse con una codificación diferente, que se visualiza en la barra inferior de estado.</p>
+<h2 id="detectar-codificacion">Detectar codificación<a class="headerlink" href="#detectar-codificacion" title="Permanent link">&para;</a></h2>
+<p>Al abrir un fichero, Geany detecta automáticamente la codificación utilizada. Si este mecanismo no funciona correctamente, tendremos que indicarla manualmente. En la ventana de diálogo de apertura, pulsar en <em>Más opciones &gt; establecer codificación</em>.</p>
+<p>Geany convierte el documento adaptándolo a la codificación deseada al cargarlo en memoria. Si al abrirlo seleccionamos "Sin codificación", no se hará transformación alguna.</p>
+<p>Si hemos abierto un archivo y no se visualiza correctamente, usar el menú <em>Archivo &gt; Recargar como</em> para volver a abrirlo asumiendo otra codificación.</p>
+<h2 id="deteccion-a-partir-del-texto">Detección a partir del texto<a class="headerlink" href="#deteccion-a-partir-del-texto" title="Permanent link">&para;</a></h2>
+<p>Algunos lenguajes de programación permiten insertar en el texto del archivo instrucciones para indicar la codificación. Geany examina las primeras líneas de texto (hasta un límite de 512 caracteres). Por ejemplo, en archivos HTML podemos encontrar algo así como:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;content-type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;text/html; charset=ISO-8859-15&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>... lo que indica que se está usando la codificación ISO-8859-15. En otro tipo de archivos podemos escribir la codificación como una línea de comentarios:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">/*</span><span class="w"> </span><span class="n">geany_encoding</span><span class="p">=</span><span class="n">ISO</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">15</span><span class="w"> </span><span class="o">*/</span>
+</code></pre></div>
+
+<p>o bien:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> geany_encoding=ISO-8859-15 #
+<span class="gh">#</span> encoding = ISO-8859-15
+<span class="gh">#</span> coding: ISO-8859-15
+</code></pre></div>
+
+<p>El formato depende de la sintaxis del lenguaje de programación.</p>
+<h2 id="guardar-con-otra-codificacion">Guardar con otra codificación<a class="headerlink" href="#guardar-con-otra-codificacion" title="Permanent link">&para;</a></h2>
+<p>Podemos transformar el fichero antes de guardarlo. Para ello usar el menú <em>Documento &gt; establecer codificación</em>.</p>
+<h2 id="archivos-nuevos">Archivos nuevos<a class="headerlink" href="#archivos-nuevos" title="Permanent link">&para;</a></h2>
+<p>Cuando creamos un archivo desde cero, la codificación por defecto depende de la configuración de Geany. Se establece con el menú <em>Editar &gt; Preferencias &gt; Archivos &gt; Codificación</em>.</p>
+<h2 id="unicode-byte-order-mark-bom">Unicode Byte-Order-Mark (BOM)<a class="headerlink" href="#unicode-byte-order-mark-bom" title="Permanent link">&para;</a></h2>
+<p>Es posible que algunos archivos lleven al principio una secuencia de bytes conocida como <em>Byte Order Mark</em> (BOM), o marca de orden de bytes (consultar <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes">Wikipedia</a> para obtener más detalles). La BOM contiene información del archivo, indicando la codificación. Geany lo tendrá en cuenta.</p>
+<p>Conviene no incluir la BOM al guardar el archivo, ya que, si se trata de un programa a compilar, por ejemplo, algunos compiladores no serán capaces de interpretarla.</p>
+<p>Para incluir una BOM en un archivo o para eliminarla, tendremos que configurarlo con el menú <em>Documento &gt; Escribir BOM Unicode</em>. Si la opción de guardar con BOM está activada, aparecerá un indicador en la barra inferior de estado:</p>
+<div class="codehilite"><pre><span></span><code>(con BOM)
+</code></pre></div>
+
+<p>En caso contrario, no se muestra nada.</p>
+<h2 id="saltos-de-linea">Saltos de línea<a class="headerlink" href="#saltos-de-linea" title="Permanent link">&para;</a></h2>
+<p>Supongamos un documento con dos líneas de texto:</p>
+<div class="codehilite"><pre><span></span><code>Hola
+Adios
+</code></pre></div>
+
+<p>Esto tiene diez caracteres:</p>
+<ul>
+<li>los cuatro caracteres de la palabra <em>Hola</em></li>
+<li>el carácter de salto de línea</li>
+<li>los cinco caracteres de la palabra <em>Adios</em></li>
+</ul>
+<p>... y posiblemente un undécimo carácter adicional, que es el salto de línea tras la palabra <em>Adios</em>.</p>
+<p>¿Cual es el código del carácter de salto de línea? Puede variar de un archivo a otro:</p>
+<ul>
+<li>
+<p>puede ser un carácter código 10, que se conoce como "line feed" (salto de línea), o "LF", y lleva el cursor a la línea siguiente</p>
+</li>
+<li>
+<p>puede ser un carácter código 13, que se conoce como "carriage return" (retorno de carro), o "CR", y lleva el cursor al inicio de la línea</p>
+</li>
+<li>
+<p>algunos archivos llevan una combinación de dos caracteres, CRLF</p>
+</li>
+</ul>
+<p>¿Quien decide los códigos a usar? Generalmente va por sistemas operativos:</p>
+<ul>
+<li>LF: sistemas tipo Unix, Linux, Mac OS X y otros</li>
+<li>CR+LF: Windows y otros sistemas antiguos de Microsoft</li>
+<li>CR: antiguos sistemas Apple II y Mac OS hasta la versión 9</li>
+</ul>
+<p>¿Que pasa si abrimos un archivo con una codificación que no se corresponde con la de nuestra máquina? Geany detecta automáticamente la codificación, y es capaz de trabajar con todas ellas. En la barra de estado inferior veremos el tipo de códigos de salto utilizados en el archivo actual:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">EOL</span><span class="o">:</span><span class="w"> </span><span class="n">CRLF</span>
+</code></pre></div>
+
+<p>EOL significa <em>end of line</em>, es decir, "carácter de fin de línea". Podemos tener abierto un archivo con un tipo de salto y convertir los códigos para guardarlo con otro estilo. Se hace mediante el menú <em>Documento &gt; Establecer fin de línea</em>.</p>
+<p>Para los archivos nuevos, podemos establecer el tipo de salto de línea por defecto mediante el menú <em>Editar &gt; Preferencias &gt; Archivos</em>.</p>
+<h2 id="visualizar-saltos-de-linea">Visualizar saltos de línea<a class="headerlink" href="#visualizar-saltos-de-linea" title="Permanent link">&para;</a></h2>
+<p>El carácter de salto de línea es algo que no tiene una representación física que podamos visualizar. Podemos simularlo si lo activamos mediante <em>Preferencias &gt; Editor &gt; Mostrar &gt; Mostrar finales de línea</em>. Esto muestra un símbolo <code>LF</code> en todos los lugares donde haya un retorno de carro o un avance de línea. La configuración permite establecer que se muestren solo los finales de línea que difieran del carácter predeterminado del archivo, CR o LF.</p>
 
 
 
@@ -791,15 +987,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
+          
+          <a href="05Terminal.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Terminal">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Terminal
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="00Intro.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Acerca de Geany">
+          <a href="07Edicion.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Edición del texto">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                📔 Acerca de Geany
+                📔 Edición del texto
               </div>
             </div>
             <div class="md-footer__button md-icon">

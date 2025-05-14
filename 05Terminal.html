@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/05Terminal.html">
       
       
+        <link rel="prev" href="04PanelLateral.html">
       
-      <link rel="icon" href="/tutorial_geany/assets/images/favicon.png">
+      
+        <link rel="next" href="06Codificacion.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>El editor de textos Geany</title>
+        <title>📔 Terminal - El editor de textos Geany</title>
       
     
     
-      <link rel="stylesheet" href="/tutorial_geany/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/tutorial_geany/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -52,9 +58,9 @@
       
     
     
-      <link rel="stylesheet" href="/tutorial_geany/css/estilos.css">
+      <link rel="stylesheet" href="css/estilos.css">
     
-    <script>__md_scope=new URL("/tutorial_geany/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#el-terminal-de-comandos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/tutorial_geany/." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -107,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              📔 Terminal
             
           </span>
         </div>
@@ -186,11 +197,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/tutorial_geany/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
           
   
     
@@ -244,7 +257,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/tutorial_geany/." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -271,6 +284,8 @@
       
   
   
+    
+  
   
   
     
@@ -315,19 +330,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/tutorial_geany/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -338,13 +356,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             📔 Introducción
@@ -360,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/00Intro.html" class="md-nav__link">
+      <a href="00Intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -381,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/01Espacio.html" class="md-nav__link">
+      <a href="01Espacio.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/02Configurar.html" class="md-nav__link">
+      <a href="02Configurar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/03Archivos.html" class="md-nav__link">
+      <a href="03Archivos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/04PanelLateral.html" class="md-nav__link">
+      <a href="04PanelLateral.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,10 +480,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/tutorial_geany/05Terminal.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="05Terminal.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -474,6 +512,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      El shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-directorio-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      El directorio actual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspecto-del-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aspecto del Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historial de comandos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copiar-y-pegar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiar y pegar
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -486,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/06Codificacion.html" class="md-nav__link">
+      <a href="06Codificacion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/07Edicion.html" class="md-nav__link">
+      <a href="07Edicion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/08Navegacion.html" class="md-nav__link">
+      <a href="08Navegacion.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/09Comandos.html" class="md-nav__link">
+      <a href="09Comandos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/10Autocompletar.html" class="md-nav__link">
+      <a href="10Autocompletar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/11Buscar.html" class="md-nav__link">
+      <a href="11Buscar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -612,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/12Simbolos.html" class="md-nav__link">
+      <a href="12Simbolos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/13Compilar.html" class="md-nav__link">
+      <a href="13Compilar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/14Proyectos.html" class="md-nav__link">
+      <a href="14Proyectos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial_geany/15Imprimir.html" class="md-nav__link">
+      <a href="15Imprimir.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,10 +831,54 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <p>vaya, algo ha fallado...</p> 
-  <h1>página no encontrada</h1>
+                  
+
+  
   
 
+
+<h1 id="el-terminal-de-comandos">El terminal de comandos<a class="headerlink" href="#el-terminal-de-comandos" title="Permanent link">&para;</a></h1>
+<p>Dependiendo de nuestro sistema operativo, existe la posibilidad de incluir en el panel inferior de mensajes una emulación del terminal de comandos. Este componente se denomina VTE (virtual terminal emulator widget).</p>
+<p>Podemos usar la VTE para introducir y ejecutar comandos del sistema operativo. Cuenta con opciones de copiar y pegar, y un menú desplegable de acciones pulsando con el botón secundario del ratón:</p>
+<p><img alt="" src="img/01Espacio07.png" /></p>
+<h2 id="el-shell">El shell<a class="headerlink" href="#el-shell" title="Permanent link">&para;</a></h2>
+<p>Toda ventana de terminal de comandos (incluida la proporcionada por el sistema operativo) ejecuta un intérprete de comandos denominado <em>shell</em>. En Linux, el shell utilizado suele ser un programa que muestra un <em>prompt</em>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">$</span>
+</code></pre></div>
+
+<p>y seguidamente espera a que introduzcamos un comando. </p>
+<p>Típicamente, el programa <em>shell</em> más utilizado en Linux suele ser uno llamado <em>bash</em>, ubicado en el directorio <code>/bin</code>. Si nuestro equipo tiene varios programas shell alternativos, podemos establecer el que queremos utilizar pulsando en el menú <em>Editar &gt; Preferencias &gt; Terminal</em>.</p>
+<p>En <a href="https://trezebits.github.io/tutorial_linux_en_mac/01008Terminal.html">otro cuaderno</a> de mi colección tengo un repaso básico de los comandos del sistema operativo Linux.</p>
+<h2 id="el-directorio-actual">El directorio actual<a class="headerlink" href="#el-directorio-actual" title="Permanent link">&para;</a></h2>
+<p>En principio, el directorio de trabajo es la carpeta principal del usuario. Podemos cambiar de directorio mediante los habituales comandos:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>micarpeta
+</code></pre></div>
+
+<p>... pero esto resulta algo farragoso si tenemos que ejecutar sucesivos comandos para navegar por la estructura de directorios. Si lo que queremos es ir a la carpeta del documento que estamos editando, pulsar sobre el terminal con el botón secundario del ratón y en el menú desplegable, seleccionar la opción <em>establecer ruta desde el documento</em>.</p>
+<p>Podemos hacer que se cambie automáticamente al directorio del documento cada vez que abramos o seleccionemos uno en el panel de edición. Configurarlo mediante el menú <em>Editar &gt; Preferencias &gt; Terminal &gt; Seguir la ruta del archivo actual</em>. De todas formas, si tenemos muchos archivos abiertos y cambiamos continuamente de uno a otro, esta posibilidad puede resultar algo mareante...</p>
+<h2 id="aspecto-del-terminal">Aspecto del Terminal<a class="headerlink" href="#aspecto-del-terminal" title="Permanent link">&para;</a></h2>
+<p>El tamaño y tipo de letra, los colores, etc. se pueden configurar pulsando el menú <em>Editar &gt; Preferencias &gt; Terminal</em>.</p>
+<h2 id="historial-de-comandos">Historial de comandos<a class="headerlink" href="#historial-de-comandos" title="Permanent link">&para;</a></h2>
+<p>Pulsando en las teclas <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> se pueden recuperar comandos anteriores para editarlos y volver a ejecutarlos. Geany mantiene un historial de hasta n comandos, número que se puede configurar mediante <em>Editar &gt; Preferencias &gt; Terminal</em>.</p>
+<h2 id="copiar-y-pegar">Copiar y pegar<a class="headerlink" href="#copiar-y-pegar" title="Permanent link">&para;</a></h2>
+<p>El funcionamiento de la VTE es similar al lde la ventana de <em>Terminal de comandos</em> del sistema operativo. Podemos copiar y pegar texto del portapapeles con:</p>
+<ul>
+<li><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> copiar</li>
+<li><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> pegar</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -749,6 +896,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="04PanelLateral.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Panel lateral">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Panel lateral
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="06Codificacion.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Codificación">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Codificación
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -773,14 +958,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/tutorial_geany/", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "/tutorial_geany/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="/tutorial_geany/assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="/tutorial_geany/javascripts/tables.js"></script>
+        <script src="javascripts/tables.js"></script>
       
-        <script src="/tutorial_geany/javascripts/mathjax.js"></script>
+        <script src="javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

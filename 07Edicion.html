@@ -1,0 +1,1391 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/07Edicion.html">
+      
+      
+        <link rel="prev" href="06Codificacion.html">
+      
+      
+        <link rel="next" href="08Navegacion.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Edición del texto - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edicion-del-texto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Edición del texto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Configurar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="07Edicion.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pulsaciones-de-teclas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulsaciones de teclas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mayusculasminusculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mayúsculas/Minúsculas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lineas-demasiado-largas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Líneas demasiado largas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seleccion-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selección de texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizacion-mas-alla-del-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualización más allá del final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espacios-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Espacios virtuales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plegado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plegado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrastrar-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrastrar texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autocierre
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sangrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sangrado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tamano-de-la-sangria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tamaño de la sangría
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-sangrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto sangrado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sustituir-tabuladores-por-espacios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sustituir tabuladores por espacios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borrar-espacios-al-final-de-cada-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrar espacios al final de cada línea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guias-de-sangria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guías de sangría
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial-de-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historial de cambios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminar-lineas-sobrantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminar líneas sobrantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-con-lineas-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operaciones con líneas de texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ortografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ortografía
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grabar-secuencia-de-pulsaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grabar secuencia de pulsaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Macros
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10Autocompletar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11Buscar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13Compilar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14Proyectos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="edicion-del-texto">Edición del texto<a class="headerlink" href="#edicion-del-texto" title="Permanent link">&para;</a></h1>
+<h2 id="pulsaciones-de-teclas">Pulsaciones de teclas<a class="headerlink" href="#pulsaciones-de-teclas" title="Permanent link">&para;</a></h2>
+<p>Geany permite editar los documentos de la forma habitual, tecleando y borrando texto. Podemos tener varios archivos abiertos a la vez, y lo que introduzcamos afectará al documento que tiene el foco del teclado, que se distingue por tener la pestaña destacada en primer plano.</p>
+<p>La <a href="https://wiki.geany.org/howtos/sorted_keyboard_shortcuts">wiki</a> de Geany tiene un resumen de combinaciones de teclas. El uso de algunas de ellas puede diferir de un sistema a otro. </p>
+<div class="admonition quote">
+<p class="admonition-title">Teclados Apple</p>
+<p>Los teclados Apple son algo atípicos, por lo que conviene aclarar ciertas peculiaridades. En la configuración de <em>preferencias</em>, apartado <em>combinaciones de teclas</em>, se hace una mención genérica a la tecla <code>&lt;primary&gt;</code>, que en los Mac viene representada por <span class="keys"><kbd class="key-command">Cmd</kbd></span>.</p>
+<p>Existen teclas que no están presentes, y se logran mediante una combinación especial:</p>
+<ul>
+<li><span class="keys"><kbd class="key-home">Home</kbd></span> se logra pulsando  <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></li>
+<li><span class="keys"><kbd class="key-end">End</kbd></span> mediante <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></li>
+<li><span class="keys"><kbd class="key-page-up">Page Up</kbd></span> mediante <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></li>
+<li><span class="keys"><kbd class="key-page-down">Page Down</kbd></span> mediante <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li><span class="keys"><kbd class="key-delete">Del</kbd></span> mediante <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span></li>
+</ul>
+<p>La tecla <span class="keys"><kbd class="key-insert">Ins</kbd></span> no existe en los teclados Mac. En algunas aplicaciones parece que se puede emular pulsando <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span>, pero no he logrado que me funcione con Geany. Si trabajamos con una máquina virtual, suele haber alguna funcionalidad en el software de virtualización para enviar pulsaciones especiales.</p>
+</div>
+<p>Algunas de las combinaciones básicas de Geany son:</p>
+<ul>
+<li>
+<p><span class="keys"><kbd class="key-f1">F1</kbd></span> abre el manual de ayuda</p>
+</li>
+<li>
+<p><span class="keys"><kbd class="key-f10">F10</kbd></span> abre el menú principal. Usar <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> para desplazarse de un menú a otro. <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> y <span class="keys"><kbd class="key-enter">Enter</kbd></span> para ir a una opción y ejecutar el comando asociado.</p>
+</li>
+<li>
+<p>Teclas para poner el foco en:</p>
+<ul>
+<li><span class="keys"><kbd class="key-f2">F2</kbd></span> panel de edición</li>
+<li><span class="keys"><kbd class="key-f4">F4</kbd></span> terminal de comandos</li>
+</ul>
+</li>
+<li>
+<p>Si pulsamos <span class="keys"><kbd class="key-home">Home</kbd></span> o <span class="keys"><kbd class="key-end">End</kbd></span>, el cursor va al final o principio de la línea. Pero cuando usamos ajuste de línea, si tenemos una muy larga que se muestra partida en varias, estas teclas van al final o principio del conjunto, salvo que usemos <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-home">Home</kbd></span> o <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-end">End</kbd></span>, lo que situa el cursor al principio o final de cada línea virtual.</p>
+</li>
+<li>
+<p>La tecla <span class="keys"><kbd class="key-home">Home</kbd></span> va al inicio de la línea, pero si está sangrada, con espacios en blanco al inicio, en realidad va al primer carácter que no sea un espacio. Hay que pulsar <span class="keys"><kbd class="key-home">Home</kbd></span> dos veces para que vaya al extremo de la línea, incluyendo los espacios.</p>
+<p>A esto se le llama <em>Tecla de Inicio Inteligente</em>, y se puede desactivar con <em>Editar &gt; Preferencias &gt; Editor &gt; Características</em>.</p>
+</li>
+<li>
+<p>Podemos cambiar de un documento abierto al siguiente/anterior pulsando en las pestañas, o con <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-page-down">Page Down</kbd></span> y <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-page-up">Page Up</kbd></span>.</p>
+</li>
+<li>
+<p>Cuando tenemos un documento extenso y hemos desplazado el texto sin cambiar la posición del cursor, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-l">L</kbd></span> regresa de nuevo a la línea actual.</p>
+</li>
+<li>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-b">B</kbd></span> Lleva el cursor al paréntesis de apertura o cierre correspondiente al actual. Una segunda pulsación devuelve el cursor de vuelta al otro paréntesis. Funciona también con llaves <code>{ }</code> o corchetes <code>[ ]</code>.</p>
+</li>
+<li>
+<p>Las teclas para copiar y pegar al portapapeles son las habituales:</p>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> copiar texto seleccionado</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span> cortar texto seleccionado</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> pegar contenido del portapapeles</li>
+</ul>
+</li>
+<li>
+<p>La tecla de deshacer es <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> y la de rehacer, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span>.</p>
+</li>
+</ul>
+<p>Para la edición, Geany se basa en los atajos de teclado predeterminados por el editor Scintilla, que pueden ser anulados si asignamos una combinación de teclas a otra función:</p>
+<ul>
+<li>Aumentar tamaño del texto: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span></li>
+<li>Reducir tamaño del texto: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span></li>
+<li>Añadir sangría al texto: <span class="keys"><kbd class="key-tab">Tab</kbd></span>, siempre que el cursor esté al inicio de la línea o del texto sangrado. En caso contrario se inserta un carácter de tabulación.</li>
+<li>Eliminar sangrado:  <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>, siempre que el cursor esté al inicio de la línea o del texto sangrado. En caso contrario se desplaza el cursor hacia atrás.</li>
+<li>Borrar hasta inicio de palabra: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span></li>
+<li>Borrar hasta fin de palabra: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
+<li>Borrar hasta inicio de línea: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span></li>
+<li>Ir a inicio de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-home">Home</kbd></span></li>
+<li>Extender selección hasta inicio de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-home">Home</kbd></span></li>
+<li>Ir al inicio de línea mostrada: <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-home">Home</kbd></span></li>
+<li>
+<p>Extender selección hasta inicio de línea mostrada: <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-home">Home</kbd></span></p>
+</li>
+<li>
+<p>Ir a final de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-end">End</kbd></span></p>
+</li>
+<li>Extender selección hasta final de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-end">End</kbd></span></li>
+<li>
+<p>Extender selección hasta final de línea mostrada: <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-end">End</kbd></span></p>
+</li>
+<li>
+<p>Párrafo anterior:  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></p>
+</li>
+<li>Párrafo siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li>Palabra anterior: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></li>
+<li>
+<p>Palabra siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></p>
+</li>
+<li>
+<p>Extender selección hasta párrafo anterior:  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></p>
+</li>
+<li>Extender selección hasta párrafo siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li>Extender selección hasta palabra anterior:  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></li>
+<li>Extender selección hasta palabra siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></li>
+</ul>
+<p>La tecla <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-1">1</kbd></span> selecciona la pestaña del primer documento, <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-2">2</kbd></span> la del segundo, y así sucesivamente. <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-0">0</kbd></span> selecciona la pestaña más a la derecha.</p>
+<h2 id="mayusculasminusculas">Mayúsculas/Minúsculas<a class="headerlink" href="#mayusculasminusculas" title="Permanent link">&para;</a></h2>
+<p>¿Cuantas veces nos hemos visto tecleando inadvertidamente un texto en mayúsculas cuando lo queríamos en minúsculas? Geany permite seleccionar un bloque de texto e invertir los caracteres mediante el menú <em>Editar &gt; Formato &gt; Convertir selección</em>. </p>
+<p>Típicamente, esta operación lleva una combinación de teclas asociada. Comprobarlo con el menú <em>Ayuda &gt; Combinaciones de teclas &gt; Formato &gt; Convertir selección a may/min</em>.</p>
+<h2 id="lineas-demasiado-largas">Líneas demasiado largas<a class="headerlink" href="#lineas-demasiado-largas" title="Permanent link">&para;</a></h2>
+<p>Si tenemos una línea que no cabe en el espacio visible del editor, en el borde inferior de la ventana de edición contamos con una barra de desplazamiento para mover la vista del documento de izquierda a derecha.</p>
+<p>Podemos mostrar una línea vertical de guía en el panel de edición, que nos servirá de referencia para limitar el ancho del texto. De esta forma, cuando una línea rebase este límite, nos acordaremos de pulsar <span class="keys"><kbd class="key-enter">Enter</kbd></span> para insertar un salto de línea. </p>
+<p>La visualización de esta guía se activa con <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Marcador de línea larga</em>. Puede consistir en una línea o en un cambio de color de fondo a la izquierda y derecha de la línea.</p>
+<p>La opción de menú <em>Documento &gt; Salto de línea</em> activa la posibilidad de insertar automáticamente el carácter de salto cuando llegamos al límite, que se establece con <em>Editar &gt; Preferencias &gt; Editor &gt; Características &gt; Columna de salto de línea</em>. ¡Cuidado! También se puede personalizar a nivel de proyecto, si tenemos uno abierto. Configurarlo con <em>Proyecto &gt; Propiedades &gt; Editor</em>. Las configuraciones de proyecto tendrán prioridad sobre la general. </p>
+<p>La opción de menú <em>Documento &gt; Ajuste de línea</em> activa la visualización completa de líneas largas mostrándolas partidas en varias líneas, aunque físicamente no exista un carácter de salto entre línea y línea. En este caso, para desplazarse al final e inicio de la línea tenemos cuatro combinaciones de teclas:</p>
+<ul>
+<li>Ir al final de la línea física: <span class="keys"><kbd class="key-end">End</kbd></span></li>
+<li>Ir al inicio de la línea física: <span class="keys"><kbd class="key-home">Home</kbd></span></li>
+<li>Ir al final de la línea mostrada: <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-end">End</kbd></span></li>
+<li>Ir al inicio de la línea mostrada: <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-home">Home</kbd></span></li>
+</ul>
+<p>... a menos que cambiemos las combinaciones de teclas.</p>
+<h2 id="seleccion-de-texto">Selección de texto<a class="headerlink" href="#seleccion-de-texto" title="Permanent link">&para;</a></h2>
+<p>Podemos seleccionar texto colocando el cursor en un extremo del bloque a seleccionar, y seguidamente:</p>
+<ul>
+<li>pulsando <span class="keys"><kbd class="key-shift">Shift</kbd></span>, usar las teclas de flechas para aumentar o disminuir la selección</li>
+<li>o bien, pulsar con el ratón en el otro  extremos del bloque mientras pulsamos <span class="keys"><kbd class="key-shift">Shift</kbd></span></li>
+<li>o bien, arrastrar el ratón hasta seleccionar el bloque</li>
+</ul>
+<p>Un caso particular es la selección de una región rectangular. Se hace pulsando <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> (teclas <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> en Windows) mientras arrastramos la selección, o bien pulsando <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> en ambos extremos del rectángulo, la esquina superior izquierda y la inferior derecha:</p>
+<p><img alt="" src="img/07Edicion02.png" /></p>
+<p>Una vez hecha la selección, todo lo que tecleemos sustituirá a lo seleccionado, replicándose en todas las líneas del rectángulo.</p>
+<p>Resulta muy útil si seleccionamos un bloque de n filas y cero columnas. El texto tecleado a continuación se replicará en múltiples líneas.</p>
+<h2 id="visualizacion-mas-alla-del-final">Visualización más allá del final<a class="headerlink" href="#visualizacion-mas-alla-del-final" title="Permanent link">&para;</a></h2>
+<p>Por defecto, al llegar a la última línea del documento, Geany no permite desplazarlo para mostrar líneas en blanco a continuación. Podemos desactivar esto mediante <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar</em>, desmarcando la opción <em>Detener desplazamiento al alcanzar la última línea</em>.</p>
+<p>En el mismo apartado podemos establecer el mínimo número de líneas que se mantendrán visibles entre el cursor y los bordes superior e inferior de la vista.</p>
+<h2 id="espacios-virtuales">Espacios virtuales<a class="headerlink" href="#espacios-virtuales" title="Permanent link">&para;</a></h2>
+<p>Si pulsamos con el ratón más allá del extremo derecho de una línea, el cursor se situará a continuación del último carácter. No es posible ubicarlo en el espacio vacío que hay a la derecha.</p>
+<p>Pero podemos activar esta posibilidad. Se hace con <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Espacios virtuales</em>. La opción "<em>Sólo para selecciones rectangulares</em>" muestra espacios virtuales solo en el caso de las líneas que forman parte de una selección rectangular.</p>
+<p>Si situamos el cursor en el espacio virtual, no se insertarán caracteres en blanco hasta que tecleemos algún texto en la posición del cursor.</p>
+<h2 id="plegado">Plegado<a class="headerlink" href="#plegado" title="Permanent link">&para;</a></h2>
+<p>En determinados tipos de archivo, podemos identificar diferentes secciones en el texto. Por ejemplo, supongamos un programa en lenguaje C:</p>
+<p><img alt="" src="img/07Edicion01.png" /></p>
+<p>Cuando Geany detecta que se trata de un archivo de este tipo, identifica los bloques de texto y los marca con una linea vertical lateral, acompañada de un icono <code>[-]</code> en la primera línea del bloque. En el ejemplo tenemos dos bloques, uno de comentarios, y el cuerpo de la función <code>main()</code>.</p>
+<p>Pulsando en ese icono <code>[-]</code> podemos "plegar" el bloque, es decir, ocultar el texto dejando visible solo la primera línea, para concentrarnos en la edición de otras partes del documento. El icono cambiará a <code>[+]</code> para volver a desplegar el texto ocultado.</p>
+<p>Podemos desactivar esta función de plegado de texto con <em>Editar &gt; Preferencias &gt; Editor &gt; Plegado de código</em>.</p>
+<p>Dependiendo del tipo de archivo, se admite el plegado anidado, es decir, un bloque dentro de otro. Según la configuración de Geany, al desplegar el bloque externo se desplegarán también los internos, y viceversa. Esto se puede cambiar con la opción "Plegar/Desplegar todos los hijos de un punto de plegado" en el cuadro de diálogo de preferencias. Si está activado, Geany desplegará todos los puntos de plegado anidados debajo del actual si ya están plegados (al hacer clic en un símbolo <code>[+]</code>). Al hacer clic en un símbolo <code>[-]</code>, Geany plegará todos los puntos de plegado anidados debajo del actual si están desplegados.</p>
+<p>Esta opción se puede invertir presionando la tecla <span class="keys"><kbd class="key-shift">Shift</kbd></span> mientras se hace clic en un símbolo de plegado. Eso significa que, si la opción "plegar/Desplegar todos los hijos de un punto de plegado" está habilitada, presionar <span class="keys"><kbd class="key-shift">Shift</kbd></span> la deshabilitará para este clic y viceversa.</p>
+<h2 id="arrastrar-texto">Arrastrar texto<a class="headerlink" href="#arrastrar-texto" title="Permanent link">&para;</a></h2>
+<p>Si seleccionamos texto y lo arrastramos con el ratón, dicho texto se moverá a la posición donde está el puntero del ratón al soltar el botón. Si mantenemos presionada la tecla <span class="keys"><kbd class="key-control">Ctrl</kbd></span> durante el arrastre, al soltar el botón del ratón, se copiará el texto.</p>
+<h2 id="autocierre">Autocierre<a class="headerlink" href="#autocierre" title="Permanent link">&para;</a></h2>
+<p>Entre los complementos de Geany tenemos uno llamado <em>Auto-close</em> que, si lo activamos, hace que cada vez que tecleemos un paréntesis, llave, corchete de apertura, comillas, etc se inserta un carácter de cierre para que no se nos olvide. Se puede configurar mediante <em>Editar &gt; Preferencias de complementos</em>, admitiendo multitud de opciones.</p>
+<h2 id="sangrado">Sangrado<a class="headerlink" href="#sangrado" title="Permanent link">&para;</a></h2>
+<p>El sangrado de líneas consiste en la posibilidad de añadir espacios en blanco a la izquierda de una línea o de un bloque de líneas:</p>
+<div class="codehilite"><pre><span></span><code>texto línea 1
+    texto sangrado
+    más texto sangrado
+última línea del documento
+</code></pre></div>
+
+<p>La sangría puede estar formada por caracteres de espacio o de tabulación. A primera vista no es posible distinguir si se trata de una u otra modalidad de espaciado. Podemos visualizar esos caracteres mediante el menú <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Mostrar espacios en blanco</em>. Si lo activamos, los espacios se mostrarán como puntos en un color gris muy diluido, apenas perceptible (depende de la configuración de colores), y los caracteres de tabulación, como flechas <code>--&gt;</code></p>
+<p>La tecla <span class="keys"><kbd class="key-tab">Tab</kbd></span> tiene dos usos:</p>
+<ul>
+<li>
+<p>si tenemos el cursor en mitad de una línea, inserta un carácter de tabulación, o bien el número equivalente de caracteres de espaciado, según como tengamos configurado Geany.</p>
+</li>
+<li>
+<p>si tenemos el cursor al principio del texto de la línea, añade un nivel de sangría, formado por tabuladores o espacios, según la configuración del editor.</p>
+</li>
+</ul>
+<p>La sangría se configura mediante el menú <em>Editor &gt; Preferencias &gt; Editor &gt; Sangría</em>. Podemos establecer que, al pulsar <span class="keys"><kbd class="key-tab">Tab</kbd></span>, se inserte un carácter de tabulación o un número de espacios. También podemos optar por una combinación de ambos. En este tercer caso, se sangra usando espacios si la sangría a obtener es menor que el ancho de la tabulación.</p>
+<p>Para suprimir un nivel de sangría, situarse al inicio de la línea y pulsar <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>. El uso de esta combinación y el de <span class="keys"><kbd class="key-tab">Tab</kbd></span> para aumentar la sangría, se puede desactivar desmarcando casillas en  <em>Editar &gt; Preferencias &gt; Editor &gt; Sangría</em>. En ese caso, la tecla <span class="keys"><kbd class="key-tab">Tab</kbd></span> se limitará a insertar un carácter de tabulación allá donde esté el cursor.</p>
+<p>Otra forma de eliminar sangría es situar el cursor al inicio del texto (no al de la línea) y pulsar la tecla de retroceso <span class="keys"><kbd class="key-backspace">Backspace</kbd></span>. Se suprimirá un nivel de sangría en lugar de un carácter de espacio. Esto se puede desactivar con  <em>Editor &gt; Preferencias &gt; Editor &gt; Sangría</em>, desmarcando <em>Tecla de retroceso elimina sangría</em>.</p>
+<p>La forma de sangrado puede establecerse a nivel general, a nivel de documento, o por proyecto, teniendo preferencias las últimas sobre las primeras:</p>
+<ul>
+<li>La configuración general se obtiene mediante el menú <em>Editar &gt; Preferencias</em>.</li>
+<li>La configuración específica de un documento, mediante el menú <em>Documento &gt; Tipo de sangría</em>.</li>
+<li>La configuración específica de un proyecto, formado por varios archivos, mediante el menú <em>Proyecto &gt; Propiedades</em>. Más adelante veremos la gestión de proyectos.</li>
+</ul>
+<p>El modo de sangrado para el documento en edición se muestra en la barra de estado, y puede ser:</p>
+<ul>
+<li>TAB - Usa tabuladores</li>
+<li>SP - Utiliza espacios. En la versión de Geany traducida al idioma español suele mostrar "ES"</li>
+<li>T/S - Utiliza ambos</li>
+</ul>
+<p>Si cambiamos la configuración, podríamos querer aplicar la nueva a los documentos abiertos en la sesión actual. Hacerlo con el menú <em>Proyecto &gt; Aplicar sangría predeterminada</em>.</p>
+<p>En la configuración de tipo de sangría existe una cuarta opción, que consiste en aplicar lo que se detecte tras analizar el contenido de cada fichero. Se establece haciendo un recuento de cuantas líneas usan tabuladores frente a cuantas usan 2 o más espacios.</p>
+<h2 id="tamano-de-la-sangria">Tamaño de la sangría<a class="headerlink" href="#tamano-de-la-sangria" title="Permanent link">&para;</a></h2>
+<p>Cuando insertamos un nivel de sangría en forma de espacios, o cuando convertimos un carácter de tabulación en espacios, se aplica al número de espacios configurado, por defecto, cuatro. Se establece don <em>Editar &gt; Preferencias &gt; Editor &gt; Sangría</em>.</p>
+<p>En lugar de aplicar un tamaño estándar, en la configuración podemos activar la opción de detectar el número de espacios a partir de lo que se está utilizando como sangría en el texto actual del documento.</p>
+<h2 id="auto-sangrado">Auto sangrado<a class="headerlink" href="#auto-sangrado" title="Permanent link">&para;</a></h2>
+<p>Si al editar una línea de texto pulsamos <span class="keys"><kbd class="key-enter">Enter</kbd></span>, el cursor va al inicio de la línea siguiente. Pero si la que abandonamos está sangrada, podríamos querer que el cursor se alinee con el texto de la línea precedente, introduciendo un sangrado automático en la nueva línea. A esto se le llama <em>autosangrado</em>. Se activa con el menú <em>Documento &gt; Sangría automática</em>.</p>
+<p>Geany tiene cuatro tipos de auto-sangrado, lo que se establece con el menú <em>Editar &gt; Preferencias &gt; Editor &gt; Sangría &gt; Modo de sangría automática</em>:</p>
+<ul>
+<li><code>Ninguna</code> - Desactiva el auto-sangrado</li>
+<li><code>Básica</code> - Añade la misma sangría que en la línea anterior, respetando la combinación de espacios y tabuladores</li>
+<li>
+<p><code>Carácter actual</code> - Lo mismo que la <code>Básica</code>, pero dependiendo del lenguaje de programación, también añade sangría tras una llave de apertura <code>{</code> y la suprime tras una llave de cierre <code>}</code>. En programas Python, añade sangría si la línea anterior termina en <code>:</code></p>
+</li>
+<li>
+<p><code>Coincidir con llaves</code> -  Similar a lo anterior, pero la llave de cierre <code>}</code> se alineará para que la sangría coincida con la de la llave de apertura <code>{</code>. Esto requiere que el tipo de archivo sea uno de los reconocidos por Geany (C, C++, D, HTML, Pascal, Bash, Perl, TCL).</p>
+</li>
+</ul>
+<p>También hay un autosangrado para archivos XML, disponible cuando el modo es <em>carácter actual</em> o <em>coincidir con llaves</em>.</p>
+<h2 id="sustituir-tabuladores-por-espacios">Sustituir tabuladores por espacios<a class="headerlink" href="#sustituir-tabuladores-por-espacios" title="Permanent link">&para;</a></h2>
+<p>Si en nuestro documento tenemos una mezcla de caracteres de tabulación y espacios no deseada, podemos hacer limpieza mediante:</p>
+<ul>
+<li>Menú <em>Documento &gt; Reemplazar tabulaciones por espacios</em></li>
+<li>Menú <em>Documento &gt; Reemplazar espacios por tabulaciones</em></li>
+</ul>
+<p>En <em>Editar &gt; Preferencias &gt; Archivos &gt; Guardado</em> podemos configurar que se sustituyan los tabuladores por espacios al guardar el documento. </p>
+<h2 id="borrar-espacios-al-final-de-cada-linea">Borrar espacios al final de cada línea<a class="headerlink" href="#borrar-espacios-al-final-de-cada-linea" title="Permanent link">&para;</a></h2>
+<p>Los espacios en blanco que hay al final de cada línea suelen pasar inadvertidos. Podemos detectar su presencia si activamos la visualización de los caracteres de salto de línea con <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Finales de línea</em>.</p>
+<p>Podemos suprimir espacios sobrantes, haciendo una limpieza general en todo el documento, con el menú <em>Documento &gt; Borrar espacios finales</em>.</p>
+<p>También podemos configurar Geany para que suprima los espacios que hay al final de cada línea al guardar los archivos. Se hace con <em>Editar &gt; Preferencias &gt; Archivos &gt; Guardado &gt; Borrar espacios al final</em>.</p>
+<p>Con <em>Editar &gt; Preferencias &gt; Editor &gt; Características</em> podemos activar que, cada vez que pulsemos <span class="keys"><kbd class="key-enter">Enter</kbd></span> para introducir una nueva línea, se eliminen los espacios finales.</p>
+<h2 id="guias-de-sangria">Guías de sangría<a class="headerlink" href="#guias-de-sangria" title="Permanent link">&para;</a></h2>
+<p>Al igual que podemos mostrar espacios y tabuladores con un carácter de punto y flecha difuminado, también podemos mostrar una guía de sangría en forma de barra vertical muy tenue. Se visualizará en aquellas líneas sangradas más de un nivel, y sirve para conocer cuantos niveles de sangría tiene una línea en particular.</p>
+<p>Se activa con <em>Editor &gt; Preferencias &gt; Editor &gt; Mostrar &gt;  Mostrar guías de sangría</em>. </p>
+<h2 id="historial-de-cambios">Historial de cambios<a class="headerlink" href="#historial-de-cambios" title="Permanent link">&para;</a></h2>
+<p>La función de historial de cambios muestra marcas para indicar el texto modificado en un documento desde que se abrió. De forma predeterminada, esta función está deshabilitada:</p>
+<p><img alt="" src="img/07Edicion03.png" /></p>
+<p>Se activa mediante el menú <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Historial de cambios</em>. Es posible que haya que reiniciar Geany.</p>
+<p>Hay dos modalidades:</p>
+<ul>
+<li>
+<p>Subrayar el texto modificado o añadido. Allí donde se eliminaron caracteres, se muestran unos pequeños triángulos.</p>
+</li>
+<li>
+<p>Indicar los cambios en la barra de margen lateral. Se mostrarán como barras verticales de diferentes colores, según el estado de la línea. El color naranja significa que hay cambios, el verde, que se han guardado, y el azul, que se han deshecho los cambios tras guardar.</p>
+</li>
+</ul>
+<p>Esta característica puede utilizar una cantidad importante de memoria, especialmente si hay muchos o grandes cambios en el documento. Además, la información de modificación no se conserva al volver a abrir un documento; se perderán todos los marcadores de cambios.</p>
+<h2 id="eliminar-lineas-sobrantes">Eliminar líneas sobrantes<a class="headerlink" href="#eliminar-lineas-sobrantes" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Addons</em> (añadidos) tiene una función <em>Strip trailing blank lines</em> que, al guardar un archivo, elimina del mismo las líneas en blanco al final del documento. Activar el complemento desde el menú <em>Herramientas &gt; Administrador de complementos</em> y seguidamente, <em>Editar &gt; Preferencias de complementos</em> y marcar <em>Strip trailing blank lines</em>.</p>
+<p>De todas formas, se mantiene una única línea en blanco si activamos <em>Preferencias &gt; Archivos &gt; Guardado &gt; Asegurar terminación de línea al final del archivo</em>.</p>
+<h2 id="operaciones-con-lineas-de-texto">Operaciones con líneas de texto<a class="headerlink" href="#operaciones-con-lineas-de-texto" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Line Operations</em> añade varias opciones de edición de líneas completas de texto. Se pueden aplicar a todo el contenido de un archivo abierto o a una selección:</p>
+<ul>
+<li>Eliminar líneas duplicadas, ordenando el resto</li>
+<li>Eliminar líneas duplicadas, sin ordenar</li>
+<li>Eliminar líneas únicas y dejar las duplicadas</li>
+<li>Mantener solo las líneas únicas</li>
+<li>Eliminar líneas vacías vacías, sin ningún carácter (deja las líneas con espacios en blanco)</li>
+<li>Eliminar líneas con solo espacios en blanco (suprime también las vacías; cuenta tabuladores como espacios)</li>
+<li>Eliminar cada n línea</li>
+<li>Ordenar líneas en orden ascendente</li>
+<li>Ordenar líneas en orden descendente</li>
+</ul>
+<p>Una vez activado el complemento (menú <em>Herramientas&gt;Administrador de complementos</em>), aparecerá una nueva entrada en el menú <em>Herramientas &gt; Operaciones con líneas</em>. Pulsar sobre una operación para aplicarla a todo el archivo o a la selección. </p>
+<p>Este complemento tiene una opción de configuración (<em>Editar &gt; Preferencias de complementos</em>). Consiste en activar la comparación de textos basada en intercalación. Cuando esta opción está habilitada, comparará cadenas utilizando reglas lingüísticamente correctas para la configuración regional de la máquina. Cuando está deshabilitada, comparará cadenas según el código numérico de los caracteres. Esta opción está deshabilitada de forma predeterminada.</p>
+<p>Por ejemplo, si tenemos:</p>
+<div class="codehilite"><pre><span></span><code>baño
+bazo
+bajo
+</code></pre></div>
+
+<p>Al seleccionar esas tres líneas y pulsar en <em>Herramientas &gt; Operaciones con líneas &gt; Ordenar ascendente</em>, con la opción desactivada se compararán bytes al ordenar:</p>
+<div class="codehilite"><pre><span></span><code>bajo
+bazo
+baño
+</code></pre></div>
+
+<p>Vemos que el código de la letra ñ es superior a los del alfabeto anglosajón a-z. Para aplicar nuestra configuración regional activamos la comparación de textos basada en intercalación</p>
+<div class="codehilite"><pre><span></span><code>bajo
+baño
+bazo
+</code></pre></div>
+
+<p>Cuando se realiza una selección en el archivo, la operación de líneas se aplicará a las líneas dentro de la selección. Si la primera o última línea están seleccionadas parcialmente, se toman las líneas completas, incluidas esas dos. Si el final de la selección está más allá del último salto de línea, se incluirá la línea siguiente.</p>
+<p>Véase más detalles en la <a href="https://plugins.geany.org/lineoperations.html#operation-details">documentación del complemento</a></p>
+<h2 id="ortografia">Ortografía<a class="headerlink" href="#ortografia" title="Permanent link">&para;</a></h2>
+<p>Geany cuenta con un corrector ortográfico en forma de complemento, que debemos activar mediante el menú <em>Herramientas &gt; Administrador de complementos &gt; Spell Check</em>.</p>
+<p>Una vez activado, se adapta al idioma local de la computadora. Se configura mediante el menú <em>Editar &gt; Preferencias de complementos</em>.</p>
+<p>La revisión automática, a medida que se escribe, se puede activar o desactivar mediante un icono <strong><code>[ab]</code></strong> en la barra de herramientas, bajo la barra de menú. Una vez activo, las palabras no reconocidas se subrayarán automáticamente. Pulsando sobre una de esas palabras con el botón secundario del ratón, en el menú contextual podemos pulsar en la opción <em>Spelling suggestions</em> para seleccionar la palabra correcta, añadirla como nueva palabra al diccionario, o hacer que se ignore en adelante.</p>
+<h2 id="grabar-secuencia-de-pulsaciones">Grabar secuencia de pulsaciones<a class="headerlink" href="#grabar-secuencia-de-pulsaciones" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Keystrokes Recorder</em> permite memorizar una secuencia de pulsaciones y reproducirla. Una vez activado, tenemos que asignar dos combinaciones de teclas (menú <em>Editar &gt; Preferencias &gt; Combinaciones</em>):</p>
+<ul>
+<li>Keystrokes recorder start/stop</li>
+<li>Keystrokes recorder play</li>
+</ul>
+<h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">&para;</a></h2>
+<p><em>Geanymacro</em> es un complemento que proporciona macros definidas por el usuario para Geany. Las macros son secuencias de acciones que luego se pueden repetir con una sola combinación de teclas. </p>
+<p>Por ejemplo, si tenemos cientos de líneas en las que desea añadir dos 2 caracteres al final:</p>
+<ul>
+<li>Pulse en <em>Herramientas &gt; record macro</em></li>
+<li>En la ventana de diálogo introduzca<ul>
+<li><em>Trigger</em>: introduzca una combinación de teclas</li>
+<li><em>Name</em>: un nombre para la macro </li>
+<li>Pulse en el botón <em>Record</em> para empezar la grabación</li>
+</ul>
+</li>
+<li>Introduzca texto o realice otras acciones</li>
+<li>Pulse en el menú <em>Herramientas &gt; Stop Recording</em></li>
+</ul>
+<p>Cada vez que pulsemos en la combinación de teclas, se reproducirá la macro. Podemos ver una lista de macros pulsando en <em>Herramientas &gt; Edit Macros</em>. En la ventana de diálogo se mostrará la lista de macros existentes, y podemos borrarlas, e incluso modificarlas.</p>
+<p>Tengase en cuenta que las acciones de deshacer y rehacer no se graban y no se reproducirán cuando se vuelva a ejecutar la macro.</p>
+<p>Podemos configurar este complemento de dos maneras</p>
+<ul>
+<li>
+<p><em>Guardar macros al cerrar Geany</em>. Si esta opción no está activada, las macros se perderán cuando se cierre Geany. Activarla para que las macros sigan presentes en la próxima sesión.</p>
+</li>
+<li>
+<p><em>Preguntar antes de reemplazar macros existentes</em>. Si intentamos grabar una macro sustituyendo una existente, esto se comprobará antes de sobrescribirla, lo que nos dará la opción de probar un nombre o una combinación de teclas de diferentes. Si no se activa esta opción, se borrarán las macros existentes con el mismo nombre o con la misma combinación de teclas.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="06Codificacion.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Codificación">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Codificación
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="08Navegacion.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Desplazamiento">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Desplazamiento
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

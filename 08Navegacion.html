@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/index.html">
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/08Navegacion.html">
       
       
+        <link rel="prev" href="07Edicion.html">
       
-        <link rel="next" href="00Intro.html">
+      
+        <link rel="next" href="09Comandos.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>📔 Introducción - El editor de textos Geany</title>
+        <title>📔 Desplazamiento - El editor de textos Geany</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-editor-de-textosgeany" class="md-skip">
+        <a href="#desplazarse-por-el-texto" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📔 Introducción
+              📔 Desplazamiento
             
           </span>
         </div>
@@ -343,7 +345,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link md-nav__link--active">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -354,7 +356,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -541,10 +543,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="08Navegacion.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="08Navegacion.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -553,6 +575,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ir-a-una-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ir a una línea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marcadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marcadores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista de marcas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navegación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desplazarse-entre-llaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desplazarse entre llaves
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrircopiar-enlaces-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir/copiar enlaces web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marcas-numeradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marcas numeradas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -750,13 +855,97 @@
   
 
 
-<p><img src="img/logo.png" style="float:right; padding-right:30px"></p>
-<h1 id="el-editor-de-textosgeany" style="text-shadow: 2px 2px #000000; text-align:left;">El editor de textos<br>Geany<a class="headerlink" href="#el-editor-de-textosgeany" title="Permanent link">&para;</a></h1>
-<p>Han pasado muchos años desde mi primer contacto con un ordenador, y a lo largo de todo este tiempo he tenido ocasión de usar diferentes editores para escribir archivos de texto. Algunos de los más populares me han parecido algo complejos, otros los encuentro frustrantes por no adecuarse a lo que ando buscando, y con frecuencia vuelvo a mi viejo Geany, un sencillo editor que fue concebido en 2005 para el sistema operativo Linux, y del que actualmente existen versiones para sistemas tipo Unix, Mac o incluso para Windows.</p>
-<p>Geany puede parecer algo simple a primera vista, pero si lo exploramos a conciencia, veremos que esconde multitud de funciones de utilidad. Se distribuye como software libre, y es desarrollado por un <a href="https://geany.org/about/geany/">equipo de colaboradores</a>. Su página web es <a href="https://geany.org">https://geany.org</a>.</p>
-<p>En esta notas intentaré plasmar un resumen de mi experiencia con Geany ejecutándose en un sistema Linux. En <a href="https://trezebits.github.io/tutorial_linux_en_mac/">otro cuaderno de mi colección</a> explico como he instalado el sistema operativo Linux en mi computadora.
-<br><br><br><br></p>
-<p style="text-align:right;color:cadetblue">Fecha última actualización de este cuaderno: 14-may-2025</p>
+<h1 id="desplazarse-por-el-texto">Desplazarse por el texto<a class="headerlink" href="#desplazarse-por-el-texto" title="Permanent link">&para;</a></h1>
+<p>Las teclas básicas de desplazamiento por el texto son las que hemos visto:</p>
+<ul>
+<li><span class="keys"><kbd class="key-home">Home</kbd></span> para ir al inicio de la línea</li>
+<li><span class="keys"><kbd class="key-end">End</kbd></span> para ir al final de la línea</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-b">B</kbd></span> lleva el cursor al paréntesis de apertura o cierre correspondiente al actual. Una segunda pulsación devuelve el cursor de vuelta al otro paréntesis. Funciona también con llaves <code>{ }</code> o corchetes <code>[ ]</code>.</li>
+<li>Ir a inicio de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-home">Home</kbd></span></li>
+<li>Ir a final de documento: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-end">End</kbd></span></li>
+<li>Párrafo anterior:  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></li>
+<li>Párrafo siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></li>
+<li>Palabra anterior: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></li>
+<li>Palabra siguiente: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></li>
+</ul>
+<h2 id="ir-a-una-linea">Ir a una línea<a class="headerlink" href="#ir-a-una-linea" title="Permanent link">&para;</a></h2>
+<p>Podemos visualizar los números de línea del documento en el margen lateral del panel de edición. Se activa con <em>Ver &gt; Mostrar números de línea</em>. </p>
+<p>Independientemente de que tengamos la visualización activada o no, podemos llevar el cursor a una línea introduciendo el número en la caja de texto adjunta a la de búsqueda, en la barra de herramientas, y pulsando en el icono <em>Saltar</em> que hay a su derecha. </p>
+<p>También podemos hacer uso del menú <em>Buscar &gt; Ir a la línea</em>.</p>
+<p><img alt="" src="img/08Navegacion01.png" /></p>
+<h2 id="marcadores">Marcadores<a class="headerlink" href="#marcadores" title="Permanent link">&para;</a></h2>
+<p>Geany proporciona una práctica función que permite marcar una o más líneas en un documento y volver con el cursor a esas líneas utilizando una combinación de teclas.</p>
+<p>Para colocar una marca en una línea, hacer clic con el ratón en la barra de margen izquierdo de la ventana del editor, o bien, situar el cursor en la línea deseada y pulsar la combinación de teclas <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span>. Esto mostrará un pequeño símbolo verde "<big><b>+</b></big>" en el margen.</p>
+<p>Podemos tener tantas marcas como queramos en un documento. Hacer clic de nuevo (o usar <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span>) para eliminar la marca. </p>
+<p>Para eliminar todas las marcas de un documento determinado, utilizar el menú <em>Documento &gt; Borrar marcas</em>.</p>
+<p>Para navegar por el documento, saltando de una marca a la siguiente, usar <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-period">.</kbd></span> (tecla control+punto). Para ir en la dirección opuesta en la página, use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-comma">,</kbd></span> (tecla control+coma).</p>
+<p>Podemos mostrar u ocultar el margen donde se visualizan las marcas con <em>Editar &gt; Preferencias &gt; Editor &gt; Mostrar &gt; Margen de marcas</em>.</p>
+<p>Las marcas no se guardan al finalizar la sesión de Geany.</p>
+<h2 id="lista-de-marcas">Lista de marcas<a class="headerlink" href="#lista-de-marcas" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Addons</em> (añadidos) añade una nueva pestaña en el panel lateral, mostrando una lista de líneas con marca. Tenemos que activarlo con el menú <em>Herramientas &gt; Administrador de complementos</em>, y seguidamente entrar en <em>Editar &gt; Preferencias de complementos</em>, para activar la opción <em>Show defined bookmarks in the sidebar</em>.</p>
+<h2 id="navegacion">Navegación<a class="headerlink" href="#navegacion" title="Permanent link">&para;</a></h2>
+<p>Supongamos que estamos escribiendo el texto de un programa, formado por bloques de instrucciones, llamados <em>funciones</em>. En un momento determinado, necesitamos consultar la definición de una función. En el panel lateral, pestaña <em>Símbolos</em>, examinamos la lista de funciones, y hacemos doble clic sobre la deseada. Esto desplazará el texto del programa y llevará el cursor a la definición de la función.</p>
+<p>Pero, a continuación, querremos recuperar la posición anterior del cursor. Geany la ha memorizado permitiendo volver mediante una combinación de teclas. Si pulsamos en el menú <em>Editar &gt; Preferencias &gt; Combinaciones de teclas</em>, en el apartado <em>Ir A...</em>  tenemos la acción navegar hacia <em>atrás/adelante</em> para desplazarnos por el historial de ubicaciones. Típicamente, se hace con <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> y <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span>.</p>
+<p>Esto funciona también para otros tipos de desplazamientos de cursor. Por ejemplo, si compilamos un programa y obtenemos una lista de errores, al pulsar sobre uno de ellos en la ventana de mensajes, el cursor se desplaza a la línea del programa donde tenemos el error. Para recuperar la posición del cursor, pulsar en la combinación de teclas <em>navegar hacia atrás</em>. </p>
+<p>Este mecanismo también funciona para desplazamientos entre varios archivos abiertos. </p>
+<p>No funciona si el desplazamiento se ha hecho con simples pulsaciones de teclado. </p>
+<h2 id="desplazarse-entre-llaves">Desplazarse entre llaves<a class="headerlink" href="#desplazarse-entre-llaves" title="Permanent link">&para;</a></h2>
+<p>Cuando un bloque de texto está delimitado por llaves <code>{...}</code> , paréntesis <code>(...)</code> o corchetes <code>[...]</code> y tenemos el cursor situado junto a uno de estos símbolos, el de apertura o el de cierre, podemos pulsar la combinación de teclas correspondiente para ir al otro símbolo correspondiente de apertura o cierre. Se configura con <em>Editar &gt; Preferencias &gt; Combinaciones &gt; Ir a la llave correspondiente</em>. </p>
+<h2 id="abrircopiar-enlaces-web">Abrir/copiar enlaces web<a class="headerlink" href="#abrircopiar-enlaces-web" title="Permanent link">&para;</a></h2>
+<p>Supongamos que, en el texto de un documento, tenemos una dirección web:</p>
+<div class="codehilite"><pre><span></span><code>Texto
+https://www.google.com
+Más texto
+</code></pre></div>
+
+<p>Podemos lograr que, situando el cursor en el texto de esa URL, al pulsar con el botón secundario del ratón, en el menú emergente aparezca dos nuevas opciones añadidas:</p>
+<ul>
+<li>copiar URL</li>
+<li>abrir URL</li>
+</ul>
+<p>La primera copia la dirección web al portapapeles. La segunda, la abre en la ventana del navegador predeterminado. Como tal se utiliza el configurado mediante <em>Editar &gt; Preferencias &gt; Herramientas &gt; Navegador</em>. </p>
+<p>Esta funcionalidad requiere activar el complemento <em>Addons</em> (añadidos) que empaqueta varias funciones de utilidad. Tenemos que entrar en <em>Editar &gt; Preferencias de complementos</em> y activar la opción.</p>
+<h2 id="marcas-numeradas">Marcas numeradas<a class="headerlink" href="#marcas-numeradas" title="Permanent link">&para;</a></h2>
+<p>Activando el complemento <em>Numbered Bookmarks</em>, contaremos con un tipo especial de marcas numeradas de 0 a 9, además de los marcadores habituales.</p>
+<p>Con las marcas estándar, tenemos que ir de una en una hasta llegar a la deseada. Con este complemento, puede ir directamente al marcador que desea con una sola combinación de teclas.</p>
+<p>Con el complemento activado, para establecer una marca numerada, presionar <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-n">N</kbd></span> siendo <span class="keys"><kbd class="key-n">N</kbd></span> una tecla de <span class="keys"><kbd class="key-0">0</kbd></span> a <span class="keys"><kbd class="key-9">9</kbd></span>. </p>
+<p>Si presionamos <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-n">N</kbd></span> (un número) en una línea que ya tiene ese número de marcador, se eliminará el marcador; de lo contrario, moverá el marcador allí si se estableció en una línea diferente, o lo creará si aún no se había establecido. </p>
+<p>Para moverse a un marcador establecido previamente, presione <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-n">N</kbd></span> (n=número de marcador). </p>
+<p>También podemos especificar a qué parte de la línea marcada se mueve el cursor cuando se mueve a un marcador establecido previamente. En la configuración del complemento se puede elegir:</p>
+<ul>
+<li>moverse al inicio de la línea</li>
+<li>al final de la línea</li>
+<li>a la distancia donde estaba el cursor cuando se estableció el marcador</li>
+<li>intentar mantener el cursor en la columna en la que se encuentra en ese momento (si lo permite la longitud de la línea). </li>
+</ul>
+<p>Solo se mostrará el marcador establecido más recientemente en una línea, pero puede tener más de un marcador por línea. Este complemento no interfiere con los marcadores regulares. Cuando se guarda un archivo, Geany recordará los marcadores numerados y se asegurará de que estén configurados la próxima vez que abra el archivo.</p>
+<p>Este complemento también recordará los marcadores no numerados estándar y los restaurará la próxima vez que vuelva a cargar un archivo si así lo desea.</p>
+<p>En la configuración podemos cambiar:</p>
+<ul>
+<li>
+<p>Recordar estado de pliegue. Si se configura, este complemento recordará el estado de cualquier pliegue junto con los marcadores numerados y los configurará la próxima vez que se cargue el archivo.</p>
+</li>
+<li>
+<p>Centrar vista al ir al marcador. Si se configura, intentará asegurarse de que el marcador numerado al que se dirige esté en el centro de la pantalla, si es posible.</p>
+</li>
+<li>
+<p>Mover a. Esto le permite elegir en qué lugar de la línea marcada se coloca el cursor cuando se mueve a una línea marcada.</p>
+</li>
+<li>
+<p>Guardar configuración de archivo. Esto nos permite:</p>
+<ul>
+<li>
+<p>la opción de guardar la configuración de un archivo (las posiciones de los marcadores numerados, los estados de plegado y las posiciones de los marcadores estándar) en el archivo de configuración general para los complementos de Geany </p>
+</li>
+<li>
+<p>guardarlo en un archivo con el mismo nombre pero un sufijo (por defecto es ".gnbs.conf") en el mismo directorio que el archivo. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Recordar marcadores normales. Si se configura esto, el complemento recordará los marcadores estándar no numerados y los restaurará la próxima vez que se cargue el archivo.</p>
+</li>
+</ul>
 
 
 
@@ -791,15 +980,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
+          
+          <a href="07Edicion.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Edición del texto">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Edición del texto
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="00Intro.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Acerca de Geany">
+          <a href="09Comandos.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Comandos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                📔 Acerca de Geany
+                📔 Comandos
               </div>
             </div>
             <div class="md-footer__button md-icon">

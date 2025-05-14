@@ -1,0 +1,1232 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/13Compilar.html">
+      
+      
+        <link rel="prev" href="12Simbolos.html">
+      
+      
+        <link rel="next" href="14Proyectos.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Compilar programas - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compilar-programas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Compilar programas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Configurar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Edicion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10Autocompletar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11Buscar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="13Compilar.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compilar-desde-geany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar desde Geany
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opciones-del-menu-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opciones del menú Construir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejecutar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detener-procesos-en-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detener procesos en ejecución
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#establecer-comandos-de-construccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Establecer comandos de construcción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caracteres-de-sustitucion-en-comandos-y-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caracteres de sustitución en comandos y directorios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atajos-de-teclado-del-menu-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atajos de teclado del menú Construir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion-entre-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navegación entre programas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructor-de-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor de clases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugger
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14Proyectos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="compilar-programas">Compilar programas<a class="headerlink" href="#compilar-programas" title="Permanent link">&para;</a></h1>
+<p>El proceso de creación de un programa pasa por varias fases:</p>
+<ul>
+<li>escribir el texto del programa (archivo fuente) y guardarlo</li>
+<li>compilarlo para obtener un archivo binario ejecutable</li>
+<li>ejecutarlo </li>
+</ul>
+<p>Las labores de compilación y ejecución se pueden hacer de tres maneras:</p>
+<ul>
+<li>
+<p>mediante comandos, en una ventana de <em>Terminal</em> separada de Geany. Por ejemplo, si escribimos un programa en lenguaje C y lo guardamos como <em>miprograma.c</em>, podemos usar el compilador <em>gcc</em>, típico de sistemas Linux. El comando de compilación sería algo así como:</p>
+<div class="codehilite"><pre><span></span><code>gcc -o miprograma miprograma.c
+</code></pre></div>
+
+<p>... lo que ejecuta el compilador <em>gcc</em> indicando que el archivo resultante (output) se llame <em>miprograma</em>, y que el fichero fuente es <em>miprograma.c</em></p>
+</li>
+<li>
+<p>también podemos ejecutar esos mismos comandos en la emulación de VTE de Geany</p>
+</li>
+<li>
+<p>como tercera alternativa, podemos invocar los comandos desde el menú <em>Construir</em> de Geany. </p>
+</li>
+</ul>
+<p>Con esta tercera opción podemos hacer uso de los menús de Geany para lograr cosas tales como:</p>
+<ul>
+<li>compilar el programa</li>
+<li>ejecutar el programa</li>
+<li>mostrar los errores de compilación en la ventana de mensajes</li>
+<li>usar herramientas de análisis de sintaxis (lint)</li>
+</ul>
+<p>El menú <em>Construir</em> se adapta al lenguaje de programación utilizado, de forma que se ocultan o muestran opciones de menú según la configuración que tengamos. </p>
+<p>La opción <em>Construir &gt; Establecer comandos de construcción</em> determina las entradas del menú y los comandos a ejecutar, tal y como los escribiríamos en un terminal de comandos.</p>
+<h2 id="compilar-desde-geany">Compilar desde Geany<a class="headerlink" href="#compilar-desde-geany" title="Permanent link">&para;</a></h2>
+<p>Ejecutar los comandos desde el menú de Geany tiene varios beneficios:</p>
+<ul>
+<li>El archivo actual se guarda automáticamente antes de ejecutar el comando.</li>
+<li>Los mensajes de compilación se capturan en la ventana inferior, mostrándose en la pestaña del compilador, y se analizan en busca de advertencias o errores. Pulsando en un mensaje de error, nos lleva a la línea del programa donde se ha detectado ese problema.</li>
+<li>Los errores de compilación se muestran en el texto del programa mediante un subrayado ondulado. </li>
+</ul>
+<p>Tras analizar los fallos y reescribir el programa, puede que esos subrayados nos molesten. Podemos suprimirlos seleccionando la opción de menú <em>Documento &gt; Borrar indicadores de error</em>.</p>
+<p>Los indicadores subrayados solo se muestran si activamos la opción <em>Editar &gt; Preferencias &gt; Editor &gt; Características &gt; Usar indicadores para mostrar errores de compilación</em></p>
+<h2 id="opciones-del-menu-construir">Opciones del menú <em>Construir</em><a class="headerlink" href="#opciones-del-menu-construir" title="Permanent link">&para;</a></h2>
+<p>El menú <em>Construir</em> tiene una considerable flexibilidad y capacidad de configuración, adaptándose a diferentes lenguajes y necesidades del usuario. Hay cuatro tipos de elementos de menú, cada uno con un comportamiento diferente:</p>
+<ul>
+<li>
+<p>Comandos de compilación dependiendo del tipo de archivo. Muestran mensajes en la ventana inferior, pestaña del compilador y los analizan en busca de errores.</p>
+</li>
+<li>
+<p>Comandos de compilación independientes del tipo de archivo. También capturan la salida en la pestaña del compilador.</p>
+</li>
+<li>
+<p>Comandos para ejecutar el programa. Son configurables, pero el resultado no se analiza en busca de errores. Si la ejecución produce mensajes, se mostrarán en el terminal de comandos.</p>
+</li>
+<li>
+<p>Comandos fijos. Realizan acciones integradas en Geany:</p>
+<ul>
+<li>Vaya al siguiente error.</li>
+<li>Ir al error anterior.</li>
+<li>Mostrar el cuadro de diálogo de configuración de comandos del menú de compilación.</li>
+</ul>
+</li>
+</ul>
+<p>El número máximo de elementos en cada uno de los grupos se puede configurar en <em>Editar &gt; Preferencias &gt; Varias</em>, usando las opciones con prefijo <code>build</code>. Podemos aumentar el número de elementos de menú, pero solo se mostrarán aquellos elementos que tienen un comando asociado.</p>
+<p>Los elementos del menú se pueden configurar de cuatro formas, que por orden de prioridad son:</p>
+<ul>
+<li>La configuración del proyecto, si tenemos uno abierto</li>
+<li>Las preferencias del usuario</li>
+<li>Las definiciones según tipo de archivo</li>
+<li>Los valores predeterminados de Geany</li>
+</ul>
+<p>Dependiendo del tipo de archivo, el menú predeterminado se divide en secciones:</p>
+<ul>
+<li>Sección 1:<ul>
+<li>Compilar</li>
+<li>Build (compilar + enlazar)</li>
+<li>Lint (analizar sintaxis)</li>
+</ul>
+</li>
+<li>Sección 2: ejecuta un comando <em>make</em>   <ul>
+<li>Make All</li>
+<li>Make objetivo personalizado</li>
+<li>Make archivo objeto</li>
+</ul>
+</li>
+<li>Sección 3:<ul>
+<li>Siguiente error</li>
+<li>Error anterior</li>
+</ul>
+</li>
+<li>Ejecutar</li>
+<li>Establecer comandos de construcción</li>
+</ul>
+<p>Esta última es la que se usa para configurar los comandos a ejecutar para cada entrada de este menú.</p>
+<h2 id="compilar">Compilar<a class="headerlink" href="#compilar" title="Permanent link">&para;</a></h2>
+<p>La traducción de texto a lenguaje máquina binario se denomina <em>compilar el programa</em>. Tendremos tres archivos, el texto escrito por nosotros (archivo fuente), el programa en formato binario (archivo objeto) y el ejecutable final, resultado de enlazar uno o varios archivos objeto.</p>
+<p>El comando compilar tiene diferentes usos, dependiendo del tipo de archivo:</p>
+<ul>
+<li>
+<p>Para lenguajes compilables como C y C++, el comando está configurado para compilar el archivo fuente actual en un archivo objeto binario. Para completar la compilación + enlazado de archivos objeto, tenemos que usar la opción <em>Build</em>.</p>
+</li>
+<li>
+<p>Los archivos fuente de Java se compilarán para obtener un archivo de clase en formato binario bytecode.</p>
+</li>
+<li>
+<p>Los lenguajes interpretados como Perl, Python o Ruby son aquellos que se pueden ejecutar directamente, sin necesidad de compilar el texto fuente. De todas formas, algunos de ellos tienen la opción de compilar a formato binario bytecode. Si no es así, el comando <em>compilar</em> hará una verificación de sintaxis o, si no está disponible, ejecutará el archivo en modo intérprete.</p>
+</li>
+</ul>
+<p>El comando <em>Build</em> enlazará el archivo objeto correspondiente al archivo fuente actual, para obtener un archivo ejecutable. Funciona con lenguajes compilables como C y C++. Si el archivo objeto no existe, el fuente se compilará y vinculará en un único paso, generando el binario ejecutable.</p>
+<p>Los lenguajes interpretados no utilizan el comando Build.</p>
+<p>El proceso de compilación finalizará con un sonido de alerta si tenemos esta opción activada (menú <em>Editar &gt; Preferencias &gt; General &gt; Varios</em>).</p>
+<h2 id="make">Make<a class="headerlink" href="#make" title="Permanent link">&para;</a></h2>
+<p>Si necesitamos configuraciones complejas de compilación, o varias configuraciones alternativas, se recomienda escribir un archivo <code>makefile</code> con los pasos del proceso, y ejecutarlo usando un comando:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>make
+</code></pre></div>
+
+<p>Este comando busca el archivo <code>makefile</code> y ejecuta los diferentes pasos.</p>
+<p>Podemos ejecutar un paso concreto invocándolo por su nombre. Por ejemplo, si en el archivo <code>makefile</code> tenemos un paso llamado <code>clean</code>, podemos ejecutar:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>make<span class="w"> </span>clean
+</code></pre></div>
+
+<p>y se ejecutaría ese paso, precedido por los relacionados en el archivo <code>makefile</code> (un paso puede estar condicionado a que se ejecuten otros previamente).</p>
+<p>Cada entrada del menú de Geany ejecuta el comando <code>make</code> en la forma determinada por la opción de menú <em>Establecer comandos de construcción</em>. Por regla general:</p>
+<ul>
+<li>
+<p>la opción <code>Make All</code> ejecuta un comando <code>make</code> tomando todos los pasos del fichero <code>makefile</code> en el directorio del archivo actual.</p>
+</li>
+<li>
+<p>la opción <code>Make objetivo personalizado</code> es similar a <em>Make All</em> pero se nos preguntará por uno de los pasos concretos dentro del archivo <code>makefile</code>.</p>
+</li>
+<li>
+<p>la opción de menú <code>Make objeto</code> ejecutará un comando:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>make<span class="w"> </span>archivo.o
+</code></pre></div>
+
+<p>cambiando "archivo" por el nombre del archivo actual. </p>
+<p>Es útil para compilar solo el archivo actual. De todas formas, depende del contenido del archivo <em>makefile</em>.</p>
+</li>
+</ul>
+<h2 id="lint">Lint<a class="headerlink" href="#lint" title="Permanent link">&para;</a></h2>
+<p>La entrada de menú <em>lint</em> ejecuta un comando <code>lint</code> para encontrar texto en los programas que no corresponde a ciertas pautas de estilo: código no portable entre plataformas, errores comunes o difíciles de encontrar, código que "huele" mal, variables utilizadas antes de configurarse, funciones no utilizadas, división por cero, etc. Los linters inspeccionan el código y emiten advertencias. Esto se conoce formalmente como <em>análisis de código estático</em>.</p>
+<p>Algunos linters comunes están preconfigurados en el menú <em>Construir</em> (<code>pycodestyle</code> para Python, <code>cppcheck</code> para C/C++, <code>JSHint</code> para JavaScript, <code>xmllint</code> para XML, <code>hlint</code> para Haskell, <code>shellcheck</code> para código shell, ...), pero todas estas son herramientas independientes que debemos instalar antes de usarlas.</p>
+<h2 id="errores">Errores<a class="headerlink" href="#errores" title="Permanent link">&para;</a></h2>
+<p>Los errores de compilación se muestran en la ventana de mensajes. Pulsando en un error, se muestra la línea infractora en la ventana de edición. Las entradas de menú <em>Construir &gt; siguiente/anterior error</em> permiten navegar entre errores.</p>
+<h2 id="ejecutar">Ejecutar<a class="headerlink" href="#ejecutar" title="Permanent link">&para;</a></h2>
+<p>El menú <em>Construir &gt; Ejecutar</em> ejecuta el programa en una ventana de terminal independiente de Geany, ejecutando un comando que se establece desde el menú <em>Establecer comandos de construcción</em>.</p>
+<p>Una vez que nuestro programa o script haya terminado de ejecutarse, el script de ejecución pedirá que presionemos la tecla <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Esto nos permite revisar cualquier salida de texto del programa antes de que se cierre la ventana del terminal.</p>
+<p>Alternativamente, podemos ejecutar los programas en la VTE. Establecer esta opción desde el menú <em>Editar &gt; Preferencias &gt; Terminal &gt; Ejecutar programas en la VTE</em>.</p>
+<p>Si usamos la ventana independiente de Terminal, tenemos que asegurarnos de que Geany tiene configurado el comando que la abre. Se puede determinar desde <em>Editar &gt; Preferencias &gt; Terminal</em>. </p>
+<h2 id="detener-procesos-en-ejecucion">Detener procesos en ejecución<a class="headerlink" href="#detener-procesos-en-ejecucion" title="Permanent link">&para;</a></h2>
+<p>Cuando hay un programa en ejecución, el comando Ejecutar en el menú "Construir" y el icono <em>Ejecutar</em> en la barra de herramientas se convierten en un botón de parada para que pueda detener el programa en ejecución (y cualquier otro proceso secundario). Esto funciona internamente enviando una señal SIGQUIT al proceso.</p>
+<p>De todas formas, es posible que el proceso no se pueda detener. Esto puede suceder, por ejemplo, cuando el proceso crea más de un proceso hijo.</p>
+<h2 id="establecer-comandos-de-construccion">Establecer comandos de construcción<a class="headerlink" href="#establecer-comandos-de-construccion" title="Permanent link">&para;</a></h2>
+<p>Por defecto, compilar, compilar y ejecutar son comandos bastante básicos. Geany cuenta con comandos predeterminados, pero es posible que queramos personalizarlos. Por ejemplo, para el lenguaje C podemos agregar flags de compilación para el compilador, nombres de biblioteca, etc. tal y como lo haríamos si compilamos desde un terminal de comandos:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>gcc<span class="w"> </span>-Wall<span class="w"> </span>-o<span class="w"> </span>miprograma<span class="w"> </span>miprograma.c<span class="w"> </span>-lm
+</code></pre></div>
+
+<p>La mayor parte de la configuración del menú <em>Construir</em> se realiza a través del cuadro de diálogo <em>Establecer comandos de compilación</em>. </p>
+<p>Si tenemos un proyecto abierto, podemos establecer una configuración específica en la pestaña <em>Construir</em> del cuadro de diálogo <em>Proyecto &gt; Propiedades del proyecto</em>. </p>
+<p>Al pulsar en <em>Construir &gt; establecer comandos</em>, la ventana de diálogo se divide en tres secciones:</p>
+<ul>
+<li>Comandos de compilación según tipo de archivo.</li>
+<li>Comandos de compilación independientes del tipo de archivo.</li>
+<li>Comandos de ejecución según tipo de archivo.</li>
+</ul>
+<p>Las secciones de tipo de archivo y de compilación independiente también contienen un campo para introducir una expresión regular a usar para mostrar mensajes de error y advertencia.</p>
+<p>Las columnas de las primeras tres secciones permiten configurar:</p>
+<ul>
+<li>el texto que se muestra en el menú</li>
+<li>el comando a ejecutar</li>
+<li>el directorio de trabajo para ejecutar el comando. </li>
+</ul>
+<p>Un elemento con un nombre en blanco no se mostrará en el menú. Un directorio de trabajo vacío hará que se tome el directorio del documento de forma predeterminada.</p>
+<p>Si no hay ningún documento actual, el comando no se ejecutará.</p>
+<p>El cuadro de diálogo mostrará el comando a ejecutar según prioridades establecidas (configuración general, a nivel de proyecto, etc), no solo los comandos configurados para este tipo de archivos fuente. Esto garantiza que siempre veremos lo que hará la opción del menú si se pulsa.</p>
+<p>Los botones de reiniciar que hay a la derecha de cada entrada, eliminan la definición que estamos editando. Cuando hagamos esto, se mostrará el comando con la siguiente prioridad.</p>
+<h2 id="caracteres-de-sustitucion-en-comandos-y-directorios">Caracteres de sustitución en comandos y directorios<a class="headerlink" href="#caracteres-de-sustitucion-en-comandos-y-directorios" title="Permanent link">&para;</a></h2>
+<p>Antes de ejecutar el comando, la primera aparición de cada una de las siguientes secuencias de caracteres, en el texto de los comando y de los directorios de trabajo, se sustituyen por los elementos que se especifican a continuación:</p>
+<ul>
+<li>%d: la ruta absoluta al directorio del archivo actual.</li>
+<li>%e: el nombre del archivo actual sin la extensión ni la ruta.</li>
+<li>%f: el nombre del archivo actual sin la ruta.</li>
+<li>%p: si un proyecto está abierto, la ruta base del proyecto.</li>
+<li>%l: el número de línea en la posición actual del cursor.</li>
+</ul>
+<h2 id="atajos-de-teclado-del-menu-construir">Atajos de teclado del menú Construir<a class="headerlink" href="#atajos-de-teclado-del-menu-construir" title="Permanent link">&para;</a></h2>
+<p>Se pueden definir atajos de teclado para:</p>
+<ul>
+<li>los dos primeros elementos del menú de compilación de tipo de archivo</li>
+<li>los primeros tres elementos del menú de construcción independiente</li>
+<li>el primer elemento del menú de ejecución</li>
+<li>los elementos del menú fijos (Error siguiente/anterior, Establecer comandos)</li>
+</ul>
+<p>Se configura mediante el menú <em>Editar &gt; Preferencias &gt;  Combinaciones de teclas &gt; Construir</em>.</p>
+<h2 id="navegacion-entre-programas">Navegación entre programas<a class="headerlink" href="#navegacion-entre-programas" title="Permanent link">&para;</a></h2>
+<p>Cuando estamos escribiendo un programa, el complemento <em>Code Navigation</em> incorpora funciones para ir de la declaración a la implementación de una función. Disponible para determinados lenguajes en el menú <em>Editar</em>.</p>
+<h2 id="constructor-de-clases">Constructor de clases<a class="headerlink" href="#constructor-de-clases" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>constructor de clases</em> es otra ayuda para escribir programas usando lenguajes que admiten una sintaxis orientada a objetos y clases. Al activarlo, pulsando en el menú <em>Herramientas &gt; Crear clase</em> se abre una ventana de diálogo para generar el texto de una clase, a incorporarlo al programa.</p>
+<h2 id="debugger">Debugger<a class="headerlink" href="#debugger" title="Permanent link">&para;</a></h2>
+<p>Geany proporciona un menú <em>Construir</em> para compilar y ejecutar programas que estamos escribiendo, pero en principio carece de las herramientas de depuración que tendríamos con un <em>Entorno Integrado de Desarrollo</em> (un IDE). El complemento <em>Debugger</em> añade una nueva pestaña <em>Debug</em> al panel inferior. Permite ejecutar los programas de una forma supervisada, deteniéndolos en un punto de ruptura, examinando variables, etc.</p>
+<p>Inicialmente se basa en el depurador GDB, aunque contempla la posibilidad de usar otros depuradores.</p>
+<p>Otro complemento es <em>Scope Debugger</em>, que proporciona una interfaz gráfica para GDB, con las funciones normales que esperaríamos (ejecución paso a paso, puntos de interrupción...) y algunas características añadidas. Añade una pestaña <em>Debug</em> al panel inferior.</p>
+<p>Podemos ingresar cualquier comando gdb, en cualquier momento (por supuesto, para que el comando se ejecute, la herramienta <em>gdb</em> debe estar instalada y disponible en nuestro ordenador).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="12Simbolos.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Símbolos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Símbolos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="14Proyectos.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Gestión de proyectos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Gestión de proyectos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

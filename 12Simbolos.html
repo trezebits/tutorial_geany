@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/index.html">
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/12Simbolos.html">
       
       
+        <link rel="prev" href="11Buscar.html">
       
-        <link rel="next" href="00Intro.html">
+      
+        <link rel="next" href="13Compilar.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>📔 Introducción - El editor de textos Geany</title>
+        <title>📔 Símbolos - El editor de textos Geany</title>
       
     
     
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#el-editor-de-textosgeany" class="md-skip">
+        <a href="#simbolos-y-etiquetas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📔 Introducción
+              📔 Símbolos
             
           </span>
         </div>
@@ -343,7 +345,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="index.html" class="md-nav__link md-nav__link--active">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -354,7 +356,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -625,10 +627,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="12Simbolos.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="12Simbolos.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -637,6 +659,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-etiquetas-globales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos de etiquetas globales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-de-archivo-de-etiquetas-globales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de archivo de etiquetas globales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-nuestros-propios-archivos-de-etiquetas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando nuestros propios archivos de etiquetas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-ignoretags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivo ignore.tags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -750,13 +828,104 @@
   
 
 
-<p><img src="img/logo.png" style="float:right; padding-right:30px"></p>
-<h1 id="el-editor-de-textosgeany" style="text-shadow: 2px 2px #000000; text-align:left;">El editor de textos<br>Geany<a class="headerlink" href="#el-editor-de-textosgeany" title="Permanent link">&para;</a></h1>
-<p>Han pasado muchos años desde mi primer contacto con un ordenador, y a lo largo de todo este tiempo he tenido ocasión de usar diferentes editores para escribir archivos de texto. Algunos de los más populares me han parecido algo complejos, otros los encuentro frustrantes por no adecuarse a lo que ando buscando, y con frecuencia vuelvo a mi viejo Geany, un sencillo editor que fue concebido en 2005 para el sistema operativo Linux, y del que actualmente existen versiones para sistemas tipo Unix, Mac o incluso para Windows.</p>
-<p>Geany puede parecer algo simple a primera vista, pero si lo exploramos a conciencia, veremos que esconde multitud de funciones de utilidad. Se distribuye como software libre, y es desarrollado por un <a href="https://geany.org/about/geany/">equipo de colaboradores</a>. Su página web es <a href="https://geany.org">https://geany.org</a>.</p>
-<p>En esta notas intentaré plasmar un resumen de mi experiencia con Geany ejecutándose en un sistema Linux. En <a href="https://trezebits.github.io/tutorial_linux_en_mac/">otro cuaderno de mi colección</a> explico como he instalado el sistema operativo Linux en mi computadora.
-<br><br><br><br></p>
-<p style="text-align:right;color:cadetblue">Fecha última actualización de este cuaderno: 14-may-2025</p>
+<h1 id="simbolos-y-etiquetas">Símbolos y etiquetas<a class="headerlink" href="#simbolos-y-etiquetas" title="Permanent link">&para;</a></h1>
+<p>Al abrir un archivo, Geany determina su tipo en base al sufijo que lleve el nombre. Por ejemplo, los programas en lenguaje C son detectados porque llevan la extensión <code>.c</code></p>
+<p>Si se trata de un fichero cuyo tipo está contemplado por el editor, se analizará su contenido para extraer la información de símbolos, que luego se muestran en el panel lateral, en la pestaña <em>Símbolos</em>.</p>
+<p>La información sobre símbolos también se usa  para el autocompletado y para mostrar información emergente:</p>
+<p><img alt="" src="img/10Autocompletar03.png" /></p>
+<p>Otra utilidad de los símbolos son los comandos <em>Buscar &gt; Ir a la definición/declaración del símbolo</em>. Estos comandos se pueden usar con todos los símbolos de los documentos abiertos.</p>
+<p>Pero esto plantea un problema. ¿Que pasa si queremos ayuda sobre una función de biblioteca?. Por ejemplo, en un programa Python:</p>
+<div class="codehilite"><pre><span></span><code>print(&quot;Hola&quot;)
+</code></pre></div>
+
+<p>... la palabra <code>print</code> no es un símbolo que hayamos definido en nuestro programa, sino que forma parte de la biblioteca Python. Necesitaríamos que Geany abra el texto fuente de esa biblioteca, analice las funciones estándar, como <code>print()</code> y prepare información sobre esos símbolos.</p>
+<p>La solución es poner dicha información en un archivo especial que contenga  definiciones 
+de símbolos (también conocido como "archivos de etiquetas globales"). Estos archivos se pueden configurar para que se carguen manualmente, o de forma automática, al iniciar Geany.</p>
+<h2 id="archivos-de-etiquetas-globales">Archivos de etiquetas globales<a class="headerlink" href="#archivos-de-etiquetas-globales" title="Permanent link">&para;</a></h2>
+<p>Los archivos de etiquetas globales se utilizan para proporcionar símbolos para el autocompletado y consejos de llamada sin tener que abrir los archivos fuente que contienen estos símbolos. Podemos abrir un archivo de etiquetas globales personalizado de dos maneras:</p>
+<ul>
+<li>Usando el comando <em>Cargar archivo de etiquetas</em> en el menú <em>Herramientas</em>.</li>
+<li>Moviendo (o creando un enlace) nuestros archivos de etiquetas al subdirectorio donde se guardan los archivos de configuración de Geany.</li>
+</ul>
+<p>Podemos descargar estos archivos o generar los nuestros propios. Se identifican porque su nombre sigue el formato:</p>
+<div class="codehilite"><pre><span></span><code>nombre.lenguaje.tags
+</code></pre></div>
+
+<p>...siendo "<em>lenguaje</em>" una de las extensiones establecidas. Algunos archivos de etiquetas globales se distribuyen con Geany y se cargarán automáticamente cuando se utilice por primera vez el tipo de archivo correspondiente.</p>
+<p>¿Como localizar estos archivos? Vamos a averiguarlo. Comenzamos por pulsar en el menú <em>Ayuda &gt; Mensajes de depuración</em>. Al comienzo de la lista de mensajes tenemos algo así como:</p>
+<div class="codehilite"><pre><span></span><code>Geany INFO    : Geany 2.0
+Geany INFO    : GTK 3.24.49, GLib 2.84.1
+Geany INFO    : OS: Ubuntu 25.04
+Geany INFO    : System data dir: /usr/share/geany
+Geany INFO    : User config dir: /home/usuario/.config
+</code></pre></div>
+
+<p>Con esto, ya sabemos donde se encuentran los directorios con ficheros de configuración de Geany. Seguidamente acudimos a un terminal de comandos del sistema operativo (o a la emulación VTE de Geany) y ejecutamos un comando para buscar ficheros con extensión <code>.tags</code>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>ls<span class="w"> </span>/usr/share/geany/tags/*.tags<span class="w"> </span>-1
+
+/usr/share/geany/tags/entities.html.tags
+/usr/share/geany/tags/std99.c.tags
+/usr/share/geany/tags/std.pas.tags
+/usr/share/geany/tags/std.php.tags
+/usr/share/geany/tags/std.py.tags
+</code></pre></div>
+
+<p>Vemos que tenemos archivos de etiquetas para los lenguajes:</p>
+<ul>
+<li>HTML</li>
+<li>C99</li>
+<li>Pascal</li>
+<li>PHP</li>
+<li>Python</li>
+</ul>
+<p>Si abrimos alguno de esos ficheros (por ejemplo, el de Python, <code>std.py.tags</code>) veremos que contiene cientos (e incluso miles) de definiciones de funciones y otros símbolos. Supongamos que buscamos la definición de la función <code>print()</code>:</p>
+<div class="highlight"><span class="filename">std.py.tags</span><pre><span></span><code><span class="nb">print</span>  <span class="o">/</span><span class="n">unknown</span> <span class="mi">1</span><span class="p">;</span><span class="s2">&quot; kind:function signature:(*args, sep=&#39; &#39;, end=&#39;</span><span class="se">\n</span><span class="s2">&#39;, file=None, flush=False)</span>
+</code></pre></div>
+<p>Cada línea es la definición de un símbolo. ¿Como es la sintaxis de esos archivos? Geany utiliza un planteamiento similar a <em>ctags</em>, una herramienta de programación originaria del sistema operativo Unix, que genera un archivo de índice con los nombres que se encuentran en el texto de los programas. </p>
+<p>Dependiendo del lenguaje de programación, podemos crear un índice de nombres de funciones, variables, miembros de la clase, macros, etc. Estas etiquetas facilitan la navegación cuando usamos un editor de texto.</p>
+<h2 id="formato-de-archivo-de-etiquetas-globales">Formato de archivo de etiquetas globales<a class="headerlink" href="#formato-de-archivo-de-etiquetas-globales" title="Permanent link">&para;</a></h2>
+<p>Geany tiene su propio formato de archivo de etiquetas, similar al que usa ctags (pero incompatible con este). En realidad, puede usar tres formatos diferentes:</p>
+<ul>
+<li>Formato del tipo CTags</li>
+<li>Formato separado por caracteres '|' (pipes)</li>
+<li>Formato de administrador de etiquetas (tagmanager)</li>
+</ul>
+<h2 id="creando-nuestros-propios-archivos-de-etiquetas">Creando nuestros propios archivos de etiquetas<a class="headerlink" href="#creando-nuestros-propios-archivos-de-etiquetas" title="Permanent link">&para;</a></h2>
+<p>El manual de Geany tiene un <a href="https://www.geany.org/manual/current/index.html#generating-a-global-tags-file">apartado</a> que describe la creación de archivos de etiquetas.</p>
+<p>Sin entrar en detalles, podemos generar nuestros propios archivos de etiquetas analizando una lista de archivos fuente. Podemos utilizar un comando <code>ctags</code> o incluso con el propio <code>geany</code>. El comando en este caso es:</p>
+<div class="codehilite"><pre><span></span><code>geany -g -P   Archivo_de_etiquetas  Lista_de_archivos
+</code></pre></div>
+
+<ul>
+<li>
+<p><code>Archivo_de_etiquetas</code> es el nombre del fichero a crear, y debe estar en el formato descrito anteriormente, <code>nombre.lenguaje.tags</code> </p>
+</li>
+<li>
+<p>La lista de archivos es una lista de nombres de archivo fuente, cada uno de ellos con su ruta completa (a menos que esté generando archivos de etiquetas C/C++ y haya establecido la variable de entorno CFLAGS).</p>
+</li>
+</ul>
+<p>Si tenemos varios archivos fuente en lenguaje C/C++, podemos crear uno maestro con sentencias <code>#include</code> y mencionarlo en el comando. Se hará un preproceso para incluir los textos de los archivos incluidos. La opción <code>-P</code>, o en su lugar <code>--no-preprocessing</code>, es opcional, y deshabilita el preproceso de directivas <code>#include</code>. Podemos utilizar esta opción si deseamos especificar cada archivo fuente en la línea de comandos en lugar de usar un archivo maestro de cabeceras. También puede ser útil si no se desea especificar la variable de entorno CFLAGS.</p>
+<p>Como ejemplo, supongamos la biblioteca "wxD" para el lenguaje de programación D:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>geany<span class="w"> </span>-g<span class="w"> </span>wxd.d.tags<span class="w"> </span>/home/username/wxd/wx/*.d
+</code></pre></div>
+
+<p>O por ejemplo, en Windows:</p>
+<div class="codehilite"><pre><span></span><code>&gt; c:\archivos de programa\geany\bin\geany -g c:\misetiquetas.php.tags c:\programa.php
+</code></pre></div>
+
+<h2 id="archivo-ignoretags">Archivo ignore.tags<a class="headerlink" href="#archivo-ignoretags" title="Permanent link">&para;</a></h2>
+<p>Podemos ignorar ciertos símbolos para los lenguajes basados en C si conducen a un análisis incorrecto del código. Pulsar en el menú <em>Herramientas &gt; Archivos de configuración &gt; ignore.tags</em> para abrir el archivo <code>ignore.tags</code> del usuario. </p>
+<p>En este archivo, podemos enumerar todos los nombres de símbolos que deseamos ignorar, separados por espacios y/o saltos de línea.</p>
+<p>Ejemplo:</p>
+<div class="codehilite"><pre><span></span><code>G_GNUC_NULL_TERMINATED
+G_GNUC_PRINTF
+G_GNUC_WARN_UNUSED_RESULT
+BAR
+</code></pre></div>
+
+<p>Esto ignorará las macros indicadas y detectará correctamente 'Foo' como un tipo en lugar de 'BAR' en una sentencia como la siguiente:</p>
+<div class="codehilite"><pre><span></span><code>struct Foo BAR { int i; };
+</code></pre></div>
 
 
 
@@ -791,15 +960,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
+          
+          <a href="11Buscar.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Búsqueda de texto">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Búsqueda de texto
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="00Intro.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Acerca de Geany">
+          <a href="13Compilar.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Compilar programas">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                📔 Acerca de Geany
+                📔 Compilar programas
               </div>
             </div>
             <div class="md-footer__button md-icon">

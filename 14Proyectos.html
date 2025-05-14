@@ -1,0 +1,1118 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Un tutorial del editor de textos Geany">
+      
+      
+      
+        <link rel="canonical" href="https://trezebits.github.io/tutorial_geany/14Proyectos.html">
+      
+      
+        <link rel="prev" href="13Compilar.html">
+      
+      
+        <link rel="next" href="15Imprimir.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>📔 Gestión de proyectos - El editor de textos Geany</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-de-proyectos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="." title="El editor de textos Geany" class="md-header__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            El editor de textos Geany
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Gestión de proyectos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+    
+  
+  📔 Introducción
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://trezebits.github.io" class="md-tabs__link">
+        
+  
+    
+  
+  📔 Otros cuadernos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="El editor de textos Geany" class="md-nav__button md-logo" aria-label="El editor de textos Geany" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    El editor de textos Geany
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/trezebits/tutorial_geany/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    📔 Introducción
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            📔 Introducción
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00Intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Acerca de Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01Espacio.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Espacio de trabajo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02Configurar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Personalizar Geany
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03Archivos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04PanelLateral.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Panel lateral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05Terminal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06Codificacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Codificación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07Edicion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Edición del texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08Navegacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Desplazamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09Comandos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Comandos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10Autocompletar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Completado de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11Buscar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Búsqueda de texto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12Simbolos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Símbolos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13Compilar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Compilar programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="14Proyectos.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📔 Gestión de proyectos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nuevo-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuevo proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rutas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades-de-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades de proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abrir-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cerrar-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cerrar proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizador-de-proyectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organizador de proyectos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="15Imprimir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Imprimir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://trezebits.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📔 Otros cuadernos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="gestion-de-proyectos">Gestión de proyectos<a class="headerlink" href="#gestion-de-proyectos" title="Permanent link">&para;</a></h1>
+<p>La gestión de proyectos consiste en agrupar documentos y tratarlos como un conjunto. Es una funcionalidad que podemos usar opcionalmente, ya que Geany permite trabajar a nivel de documento individual.</p>
+<p>El uso de esta funcionalidad permite crear una configuración personalizada para los archivos que que formen parte del proyecto, de forma que:</p>
+<ul>
+<li>la configuración general de Geany se personaliza mediante el menú <em>Editar &gt; Preferencias</em></li>
+<li>la configuración específica para un proyecto abierto se edita con el menú <em>Proyecto &gt; Propiedades</em></li>
+<li>el menú <em>Construir</em> permite el uso de comandos específicos para el proyecto que tengamos abierto</li>
+</ul>
+<p>La configuración de un proyecto se guarda en un archivo con extensión <code>.geany</code>, en la misma carpeta que los archivos del proyecto. El contenido de este fichero se genera automáticamente, y se guarda al cerrar el proyecto, o cuando se cierra Geany. Al reiniciar Geany, se volverá a abrir el archivo de proyecto que estaba en uso al final de la última sesión.</p>
+<h2 id="nuevo-proyecto">Nuevo proyecto<a class="headerlink" href="#nuevo-proyecto" title="Permanent link">&para;</a></h2>
+<p>Hay dos formas de crear nuevos proyectos, ya sea usando el elemento de menú <em>Proyecto &gt; Nuevo</em> o usando el elemento de menú <em>Proyecto &gt; Nuevo desde carpeta</em>.</p>
+<ul>
+<li>
+<p><em>Proyecto &gt; Nuevo</em></p>
+<p>Este método es el adecuado para crear proyectos desde cero. Se creará una carpeta en el directorio base predeterminado, en principio, sin documentos.</p>
+<p>El directorio base predeterminado se establece con el menú <em>Editar &gt; preferencias &gt; General &gt; Inicio &gt; Rutas</em>. </p>
+<p>Al crear un nuevo proyecto, tenemos que cumplimentar una ventana de diálogo:</p>
+<p><img alt="" src="img/14Proyectos01.png" /></p>
+<p>En primer lugar tenemos el nombre del proyecto. El apartado <em>nombre de archivo</em> establece el nombre del fichero con extensión <code>.geany</code> que guarda las propiedades del proyecto. El apartado <em>ruta base</em> establece la ubicación de la carpeta con los elementos del proyecto.</p>
+</li>
+<li>
+<p><em>Proyecto &gt; Nuevo desde la carpeta</em></p>
+<p>Este método es más adecuado cuando ya existe alguna carpeta que contiene archivos con los cuales deseamos crear un nuevo proyecto.</p>
+<p>Al utilizar este método, Geany primero pregunta por la carpeta que contiene los archivos de texto. El campo <em>ruta base</em> se establecerá con esa ubicación.</p>
+<p>Seguidamente, Geany muestra el mismo cuadro de diálogo que si usáramos el método <em>Proyecto &gt; Nuevo</em>, pero ya completado con los valores basados ​​en la selección de la ruta base.</p>
+</li>
+</ul>
+<h2 id="rutas">Rutas<a class="headerlink" href="#rutas" title="Permanent link">&para;</a></h2>
+<p>Pulsando en <em>Editar &gt; Preferencias &gt; General &gt; Inicio &gt; Rutas</em>, podemos establecer la ruta por defecto para proyectos.</p>
+<p>Pulsando en <em>Editar &gt; Preferencias &gt; General &gt; Varios &gt; Proyectos</em>, podemos habilitar la opción <em>almacenar el archivo del proyecto dentro del directorio base del proyecto</em>. Sin esta opción habilitada, la ruta predeterminada del archivo <code>.geany</code> está un nivel por encima de la ruta base del proyecto. </p>
+<p>En cualquier caso, podemos configurar fácilmente la ruta del archivo del proyecto final en el cuadro de diálogo <em>Nuevo proyecto</em>. Las preferencias proporciona solo valores predeterminados.</p>
+<h2 id="propiedades-de-proyecto">Propiedades de proyecto<a class="headerlink" href="#propiedades-de-proyecto" title="Permanent link">&para;</a></h2>
+<p>El contenido del archivo de configuración de proyecto <code>.geany</code> se establece principalmente con el menú <em>Proyecto &gt; Propiedades</em>, siempre que tengamos un proyecto abierto:</p>
+<p><img alt="" src="img/14Proyectos02.png" /></p>
+<p>Podemos establecer una descripción opcional para el proyecto. Solo se utiliza para el comodín de plantilla <code>{description}</code>. Ver capítulo de <em>Completado del texto</em>.</p>
+<p>El campo <em>Ruta base</em> se utiliza como directorio de trabajo para ejecutar los comandos del menú Construir. La ruta especificada puede ser una ruta absoluta o relativa.</p>
+<p>El campo <em>Patrones de archivo</em> permite especificar una lista de tipos de archivo para el proyecto, que se puede utilizar en el cuadro de diálogo <em>Buscar en archivos</em>. Por ejemplo, en un proyecto de programa escrito en lenguaje C:</p>
+<div class="codehilite"><pre><span></span><code>*.c  *.h
+</code></pre></div>
+
+<p>Las pestañas <em>Sangría</em>, <em>Editor</em> y <em>Archivos</em> permiten personalizar la configuración del proyecto, anteponiéndose a las opciones generales del editor.</p>
+<p>La pestaña <em>Construir</em> permite establecer comandos específicos para el proyecto.</p>
+<h2 id="abrir-proyecto">Abrir proyecto<a class="headerlink" href="#abrir-proyecto" title="Permanent link">&para;</a></h2>
+<p>El comando <em>Proyecto &gt; Abrir</em> muestra la ventana de selección de archivos, situándose en el directorio establecido como predeterminado para proyectos. Debemos buscar y abrir el archivo con la extensión <code>.geany</code>.</p>
+<p>Geany cerrará los archivos actualmente abiertos y abrirá los archivos de sesión asociados con el proyecto.</p>
+<h2 id="cerrar-proyecto">Cerrar proyecto<a class="headerlink" href="#cerrar-proyecto" title="Permanent link">&para;</a></h2>
+<p>El comando <em>Proyecto &gt; cerrar</em> cierra el proyecto y sus archivos. El archivo de configuración <code>.geany</code> se guarda en ese momento.</p>
+<p>Geany cerrará los archivos de la sesión del proyecto y abrirá los archivos de sesión previamente cerrados.</p>
+<h2 id="organizador-de-proyectos">Organizador de proyectos<a class="headerlink" href="#organizador-de-proyectos" title="Permanent link">&para;</a></h2>
+<p>El complemento <em>Projecy Organizer</em> añade una etiqueta en el panel lateral, que permite navegar por los archivos del proyecto actualmente abierto, mostrándolos en forma de árbol de carpetas. </p>
+<p>Incluye la indexación completa de los archivos del proyecto (y la finalización de código, el resaltado de sintaxis y los saltos de definición/declaración de símbolos para todo el proyecto), el intercambio rápido entre los archivos de encabezado y fuente, la búsqueda de archivos de proyecto por nombre y más. </p>
+<p>Se pueden añadir directorios relacionados fuera del árbol del proyecto.</p>
+<p>La información de cualquier proyecto se guarda en el archivo con extensión <code>.geany</code>, y en principio, lo que se almacena para cada proyecto es:</p>
+<ul>
+<li>directorio base del proyecto</li>
+<li>configuraciones de compilación</li>
+<li>lista de archivos abiertos</li>
+</ul>
+<p>Este enfoque es adecuado para proyectos pequeños en los que la mayoría de los archivos del proyecto se almacenan en un solo directorio, pero no funciona muy bien con proyectos que constan de muchos directorios profundamente anidados, con cientos o incluso miles de archivos. Para este tipo de proyectos, un árbol expandible que muestre todos los archivos del proyecto es una mejor alternativa, ya que facilita la navegación entre los distintos directorios del proyecto. Saber qué archivos pertenecen al proyecto permite agregar otras funciones útiles, como la indexación de archivos del proyecto, el intercambio de encabezados y fuentes o la búsqueda de archivos.</p>
+<p>Mantener una lista de archivos del proyecto es bastante complicado en proyectos grandes que constan de miles de archivos y muchos desarrolladores trabajando en ellos. Los archivos se crean, eliminan y mueven con bastante frecuencia y, después de cada cambio, el proyecto debe actualizarse manualmente. El complemento <em>Project Organizer</em> define una lista de archivos que pertenecen al proyecto de manera implícita utilizando:</p>
+<ul>
+<li>el directorio base del proyecto</li>
+<li>una lista de patrones tipo "glob" (por ejemplo, <code>*.c</code>, <code>*.h</code> o simplemente <code>*</code> si desea ver todos los ficheros)</li>
+</ul>
+<p>Todos los archivos del directorio base que coincidan con los patrones se incluyen en el proyecto y actualizar la lista de archivos es tan simple como presionar el botón de actualización en la barra lateral.</p>
+<p>Existe otro complemento de Geany para la gestión de proyectos: GeanyPrj. <em>Project Organizer</em> y <em>GeanyPrj</em> difieren en varios aspectos:</p>
+<ul>
+<li>
+<p>Project Organizer es una extensión del proyecto de Geany, por lo que cada proyecto de Geany es un proyecto de Project Organizer al mismo tiempo y viceversa. Por su parte, el GeanyPrj es un gestor independiente, por lo que si se desea configurar las propiedades de compilación para un proyecto con GeanyPrj, debemos configurar un segundo proyecto de Geany en paralelo.</p>
+</li>
+<li>
+<p>GeanyPrj puede mostrar varios proyectos en la barra lateral. Aunque solo se puede abrir un único proyecto con Project Organizer a la vez, se puede lograr un efecto similar con la función "directorios externos".</p>
+<p>Project Organizer muestra el árbol completo en la barra lateral, mientras que GeanyPrj muestra solo un árbol de dos niveles (el nombre completo del directorio como padre y una lista de archivos debajo del directorio).</p>
+</li>
+<li>
+<p>Project Organizer tiene patrones de archivos configurables, mientras que los patrones en GeanyPrj están codificados de forma rígida</p>
+</li>
+<li>
+<p>Project Organizer ofrece intercambio de archivo de cabecera/archivo fuente</p>
+</li>
+<li>
+<p>Project Organizer ofrece búsqueda de archivos de proyecto por nombre y una apertura mejorada de archivos de inclusión</p>
+</li>
+</ul>
+<p>Al crear el proyecto, debe definir la lista de patrones de archivos en la pestaña Proyecto-&gt;Propiedades del proyecto. Por ejemplo, para un proyecto C de código abierto típico, usar los patrones <code>*.c</code>, <code>*h</code>, <code>*.am</code>, <code>*.ac</code> para ver los archivos fuente junto con los archivos automake y autoconf. Si no se definen patrones (predeterminado), Project Organizer trata todo esto como el patrón "*", en cuyo caso se muestran todos los archivos del directorio del proyecto. Después de cerrar el cuadro de diálogo, los archivos que coinciden con los patrones deben aparecer en la barra lateral debajo de la pestaña Proyecto.</p>
+<p>Hay configuraciones adicionales disponibles en la pestaña Project Organizer en el cuadro de diálogo Propiedades del proyecto. Podemos definir patrones para distinguir entre archivos de encabezado y fuente para lenguajes similares a C. Esta información se utiliza para el intercambio de encabezado/fuente.</p>
+<p>Además, se puede definir patrones para archivos y directorios que deben ignorarse al buscar archivos pertenecientes al proyecto. Por lo general, estos serán varios archivos binarios y VCS u directorios ocultos.</p>
+<p>Finalmente, podemos especificar si todos los archivos del proyecto deben indexarse ​​o no. La configuración predeterminada es <em>Auto</em>, lo que significa que si el número total de archivos del proyecto (y del directorio externo) es menor a 1000, se realiza la indexación. Este es un número bastante conservador, al menos para un disco SSD: Project Organizer se probó con decenas de miles de archivos de proyecto y, aunque el escaneo inicial puede llevar algo de tiempo (para el kernel de Linux con 35000 archivos y 2300000 símbolos, lleva aproximadamente 20 segundos con un disco SSD), el trabajo con el proyecto es completamente normal después. Sin embargo, con un HDD común, esperar solo alrededor de 100 archivos escaneados por segundo debido al lento tiempo de acceso aleatorio.</p>
+<p>La barra lateral contiene un árbol de archivos pertenecientes al proyecto y árboles de directorios externos (dibujados con fondo gris para distinguirlos de los archivos de proyecto normales). Los directorios se pueden expandir haciendo doble clic en ellos; la misma acción se utiliza para abrir archivos. Cuando se hace clic derecho en un elemento de la barra lateral, aparece un menú contextual:</p>
+<ul>
+<li>
+<p>Expandir todo: expande recursivamente todos los subdirectorios del directorio dado</p>
+</li>
+<li>
+<p>Buscar en archivos: abre el cuadro de diálogo Buscar en archivos y establece el directorio de búsqueda en el directorio en el que se hizo clic</p>
+</li>
+<li>
+<p>Buscar archivo: abre el cuadro de diálogo Buscar archivo y establece el directorio de búsqueda en el directorio en el que se hizo clic</p>
+</li>
+<li>
+<p>Buscar símbolo: abre el cuadro de diálogo Buscar símbolo y establece el directorio de búsqueda en el directorio en el que se hizo clic</p>
+</li>
+<li>
+<p>Eliminar directorio externo: elimina un directorio externo agregado previamente del proyecto</p>
+</li>
+</ul>
+<p>Las siguientes acciones se pueden invocar desde la barra de herramientas de la barra lateral:</p>
+<ul>
+<li>
+<p>Recargar todo: vuelve a cargar el árbol de archivos del proyecto y vuelve a indexar los archivos (si está habilitada la generación de símbolos). Esto es útil cuando se agregaron archivos, se modificaron externamente o se eliminaron del proyecto.</p>
+</li>
+<li>
+<p>Agregar directorio externo: agrega un directorio adicional relacionado con el proyecto (por ejemplo, es útil tener el proyecto geany como un directorio externo para el proyecto geany-plugins). Los directorios externos están indexados y, básicamente, todas las funciones del Organizador de proyectos también funcionan con directorios externos (buscar archivo o buscar en archivos desde el menú contextual, intercambiar encabezado/fuente, abrir archivo seleccionado, saltos de definición/declaración de símbolos y seguir el editor activo). Además de agregar proyectos relacionados, uno de los usos posibles es agregar directorios de encabezado del sistema, por ejemplo, /usr/include/gtk-2.0, y tenerlos indexados para completar el código y resaltar la sintaxis.</p>
+</li>
+<li>
+<p>Expandir todo: expande recursivamente todos los directorios</p>
+</li>
+<li>
+<p>Contraer a la raíz del proyecto: contrae todos los directorios excepto la raíz del proyecto</p>
+</li>
+<li>
+<p>Seguir el editor activo: selecciona automáticamente el archivo actual en la barra lateral cuando el usuario cambia a otro archivo. Expande automáticamente el árbol para revelar el archivo seleccionado. Activado de manera predeterminada.</p>
+</li>
+</ul>
+<p>Project Organizer agrega algunas entradas adicionales en el menú Proyecto:</p>
+<ul>
+<li>
+<p>Buscar en archivos de proyecto: abre el cuadro de diálogo Buscar en archivos y establece el directorio de búsqueda en el directorio base del proyecto</p>
+</li>
+<li>
+<p>Buscar archivo de proyecto: abre el cuadro de diálogo Buscar archivo que se puede usar para buscar archivos dentro del proyecto o directorios externos</p>
+</li>
+<li>
+<p>Buscar símbolo de proyecto: abre el cuadro de diálogo Buscar símbolo que se puede usar para buscar símbolos dentro del proyecto o directorios externos</p>
+</li>
+<li>
+<p>Intercambiar encabezado/origen: si el archivo actual coincide con uno de los patrones de origen de las propiedades, abre un archivo de proyecto con el mismo nombre base (sin extensión) que coincida con los patrones de encabezado (y viceversa). Si los archivos ya están abiertos, simplemente cambia las pestañas del documento. No sucede nada si no se encuentra ningún archivo coincidente.</p>
+</li>
+</ul>
+<p>A cada una de estas entradas se le puede asignar una combinación de teclas pulsando en el menú <em>Editar &gt; Preferencias  Combinaciones de teclas</em>.</p>
+<p>El cuadro de diálogo Buscar archivo se puede invocar desde el menú Proyecto o desde el menú contextual de la barra lateral. Las búsquedas se realizan de forma recursiva, comenzando desde el directorio "Buscar dentro". Todos los archivos que tienen la cadena buscada como subcadena de su nombre se muestran en la ventana Mensajes. Al hacer clic en el nombre del archivo, se abre el archivo. Las siguientes propiedades de búsqueda son configurables:</p>
+<ul>
+<li>
+<p>Distingue entre mayúsculas y minúsculas: especifica si las búsquedas deben distinguir entre mayúsculas y minúsculas</p>
+</li>
+<li>
+<p>Buscar en la ruta completa: cuando no está marcada, la búsqueda se realiza solo en el nombre del archivo (excluyendo la ruta); cuando está marcada, la búsqueda se realiza en la ruta completa</p>
+</li>
+</ul>
+<p>El cuadro de diálogo Buscar símbolo se puede invocar desde el menú Proyecto o desde el menú contextual de la barra lateral. Las búsquedas se realizan dentro del directorio "Buscar dentro". Hay varios tipos de búsqueda:</p>
+<ul>
+<li>prefijo (predeterminado): busca todos los símbolos con el prefijo especificado</li>
+<li>exacto: busca todos los símbolos que coinciden exactamente con el nombre</li>
+<li>patrón: busca todos los símbolos que coinciden con el patrón global proporcionado</li>
+</ul>
+<p>De manera predeterminada, se buscan definiciones de símbolos; para buscar declaraciones de símbolos, seleccione la opción Declaración.</p>
+<p>El Organizador de proyectos agrega una entrada adicional al menú contextual del editor:</p>
+<ul>
+<li>Abrir archivo seleccionado (Organizador de proyectos). A diferencia de la entrada Abrir archivo seleccionado presente en Geany, también busca el archivo en archivos de proyecto y directorios externos.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="13Compilar.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 📔 Compilar programas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                📔 Compilar programas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="15Imprimir.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 📔 Imprimir">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                📔 Imprimir
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "navigation.tabs", "toc.integrate", "navigation.top", "navigation.indexes", "content.code.copy", "content.tooltips", "search.highlight"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="javascripts/tables.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,5 +1,3 @@
-# Guía para crear documentación
+# Tutorial del editor de textos Geany
 
-Un pequeño tutorial para crear documentación técnica en formato *markdown*, compilarla con *MkDocs* y alojarla en *GitHub*.
-
-Visible en <https://trezebits.github.io/tutorial_mkdocs>
+Un tutorial para el editor de textos Geany. Disponible en <https://trezebits.github.io/tutorial_geany>
